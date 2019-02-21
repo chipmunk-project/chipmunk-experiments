@@ -1,3 +1,4 @@
+start=$SECONDS
 domino_program=${1?Input domino_program}
 alu=${2?Input alu}
 pipeline_len=${3?Input pipeline_len}
@@ -17,3 +18,6 @@ else
   echo "no; output:"
   echo $Output_result
 fi
+
+end=$SECONDS
+echo "duration: $((end-start)) seconds."
