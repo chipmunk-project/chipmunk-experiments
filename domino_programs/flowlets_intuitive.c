@@ -1,4 +1,4 @@
-#include "hashes.h"
+//#include "hashes.h"
 
 #define NUM_FLOWLETS 8000
 #define THRESHOLD    5
@@ -18,18 +18,21 @@ int saved_hop [NUM_FLOWLETS] = {0};
 
 void flowlet(struct Packet pkt) {
   // Compute packet id
-  pkt.id  = hash2(pkt.sport,
+/*  pkt.id  = hash2(pkt.sport,
                   pkt.dport)
             % NUM_FLOWLETS;
-
+*/
+  pkt.id = pkt.id;
   if (pkt.arrival -
       last_time[pkt.id] >
       THRESHOLD) {
     // Load balance if we exceeded IPG
-    pkt.next_hop = hash3(pkt.sport,
+/*    pkt.next_hop = hash3(pkt.sport,
                         pkt.dport,
                         pkt.arrival)
                    % NUM_HOPS;
+*/  
+    pkt.next_hop = pkt.next_hop;
     // Save load balancing decision
     saved_hop[pkt.id] = pkt.next_hop;
   } else {

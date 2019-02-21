@@ -1,4 +1,4 @@
-#include "hashes.h"
+//#include "hashes.h"
 #define ARRAY_SIZE 1000000
 
 struct Packet {
@@ -20,7 +20,8 @@ int array1val[ARRAY_SIZE] = {0};
 // p.terminate determines if the downstream stages run
 void func(struct Packet p) {
  // First stage
- p.loc = hash2(p.ikey, p.ikey); // Compute location using hash
+// p.loc = hash2(p.ikey, p.ikey); // Compute location using hash
+ p.loc = p.loc;
  if (array1key[p.loc] == p.ikey) { // if this key already exists
    array1val[p.loc] = array1val[p.loc] + 1; // increment
    p.terminate = 1;

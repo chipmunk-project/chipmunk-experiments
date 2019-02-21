@@ -1,4 +1,4 @@
-#include "hashes.h"
+//#include "hashes.h"
 
 #define NUM_FLOWS 8000
 #define TIME_MIN 1
@@ -15,10 +15,11 @@ struct Packet {
 int last_finish [NUM_FLOWS] = {TIME_MIN};
 
 void stfq(struct Packet pkt) {
-  pkt.id  = hash2(pkt.sport,
+/*  pkt.id  = hash2(pkt.sport,
                   pkt.dport)
             % NUM_FLOWS;
-
+*/
+  pkt.id = pkt.id; 
   if ((last_finish[pkt.id] > TIME_MIN) && (pkt.virtual_time < last_finish[pkt.id])) {
     pkt.start = last_finish[pkt.id];
     last_finish[pkt.id] += pkt.length;

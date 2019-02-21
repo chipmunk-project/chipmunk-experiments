@@ -1,7 +1,8 @@
-#include "hashes.h"
+//#include "hashes.h"
 
 int rand(int prob) {
-  int hash_val = hash2(prob, 0);
+//  int hash_val = hash2(prob, 0);
+  int hash_val = prob;
   if (hash_val > 1000) {
     return 1;
   } else {

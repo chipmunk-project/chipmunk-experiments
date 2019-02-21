@@ -1,4 +1,4 @@
-#include "hashes.h"
+//#include "hashes.h"
 #define ARRAY_SIZE 1000000
 
 struct Packet {
@@ -19,7 +19,8 @@ int array2val[ARRAY_SIZE] = {0};
 // Runs only if p.terminate is not set
 void func(struct Packet p) {
  // Second stage
- p.loc = hash2(p.ckey, p.ckey);             // compute location
+// p.loc = hash2(p.ckey, p.ckey);             // compute location
+ p.loc = p.loc;
  if (array2key[p.loc] == p.ckey) {     // key already exists
    array2val[p.loc] = array2val[p.loc] + p.cval; // add cval
    p.terminate = 1;
