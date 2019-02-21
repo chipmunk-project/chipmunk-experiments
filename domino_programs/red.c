@@ -1,5 +1,5 @@
 //#include "hashes.h"
-
+/*
 int rand(int prob) {
 //  int hash_val = hash2(prob, 0);
   int hash_val = prob;
@@ -8,7 +8,7 @@ int rand(int prob) {
   } else {
     return 0;
   } 
-} 
+}*/ 
 
 struct Packet {
   int q_inst;
@@ -27,6 +27,6 @@ void func(struct Packet p) {
     p.mark = 1;
   } else {
     p.prob = (q_avg - 50) * 100000 / (100 - 50);
-    p.mark = rand(p.prob);
+    p.mark = p.prob;
   }
 }
