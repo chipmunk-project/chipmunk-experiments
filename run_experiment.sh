@@ -2,13 +2,18 @@ domino_program=${1?Input domino_program}
 alu=${2?Input alu}
 pipeline_len=${3?Input pipeline_len}
 pipeline_width=${4?Input pipeline_width}
+chipmunk_folder=${5?Input chipmunk_folder}
 
 domino_to_chipmunk $domino_program > /tmp/tmp.sk
 
-Output_result=$(chipmunk /tmp/tmp.sk $alu $pipeline_len $pipeline_width codegen sample1)
+cd $chipmunk_folder
+Output_result=$(python3 chipmunk.py /tmp/tmp.sk $alu $pipeline_len $pipeline_width codegen sample1)
 
+echo -e "\n\nCompilation result:"
 if [[ $Output_result == *"Sketch succeeded"* ]]; then
-  echo "yes"
+  echo "yes; output:"
+  echo $Output_result
 else
-  echo "no"
+  echo "no; output:"
+  echo $Output_result
 fi
