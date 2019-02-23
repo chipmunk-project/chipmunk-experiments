@@ -17,15 +17,15 @@ int last_time [NUM_FLOWLETS] = {0};
 int saved_hop [NUM_FLOWLETS] = {0};
 
 void flowlet(struct Packet pkt) {
-/*  pkt.new_hop = hash3(pkt.sport,
-                      pkt.dport,
-                      pkt.arrival)
-                % NUM_HOPS;
+//  pkt.new_hop = hash3(pkt.sport,
+//                      pkt.dport,
+//                      pkt.arrival)
+//                % NUM_HOPS;
 
-  pkt.id  = hash2(pkt.sport,
-                  pkt.dport)
-            % NUM_FLOWLETS;
-*/
+//  pkt.id  = hash2(pkt.sport,
+//                  pkt.dport)
+//            % NUM_FLOWLETS;
+
   pkt.new_hop = pkt.new_hop;
   pkt.id = pkt.id;
 

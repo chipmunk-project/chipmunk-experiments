@@ -13,10 +13,10 @@ Output_result=$(python3 chipmunk.py /tmp/tmp.sk $alu $pipeline_len $pipeline_wid
 echo -e "\n\nCompilation result:"
 if [[ $Output_result == *"Sketch succeeded"* ]]; then
   echo "yes; output:"
-  echo $Output_result
+  echo -e $Output_result
 else
   echo "no; output:"
-  echo $Output_result
+  echo -e $Output_result
 fi
 
 end=$SECONDS

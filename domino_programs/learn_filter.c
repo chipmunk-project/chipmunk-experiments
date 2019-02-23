@@ -16,9 +16,9 @@ int filter2[NUM_ENTRIES] = {0};
 int filter3[NUM_ENTRIES] = {0};
 
 void func(struct Packet pkt) {
-/*  pkt.filter1_idx = hash2a(pkt.sport, pkt.dport) % NUM_ENTRIES;
-  pkt.filter2_idx = hash2b(pkt.sport, pkt.dport) % NUM_ENTRIES;
-  pkt.filter3_idx = hash2c(pkt.sport, pkt.dport) % NUM_ENTRIES;*/
+//  pkt.filter1_idx = hash2a(pkt.sport, pkt.dport) % NUM_ENTRIES;
+//  pkt.filter2_idx = hash2b(pkt.sport, pkt.dport) % NUM_ENTRIES;
+//  pkt.filter3_idx = hash2c(pkt.sport, pkt.dport) % NUM_ENTRIES;
   pkt.filter1_idx = pkt.filter1_idx;  
   pkt.filter2_idx = pkt.filter2_idx; 
   pkt.filter3_idx = pkt.filter3_idx; 
