@@ -56,11 +56,13 @@ def main(argv):
         print("Current compilation file is " + sketch_file_name)
         # Get the string to run in terminal
         str_to_run_in_terminal = "iterative_solver " + sketch_file_name + " " + alu_file + " " + num_pipeline_stages + " " + num_alus_per_stage + " " + sketch_name + " " + parallel_or_serial + " " + mode
+        print(str_to_run_in_terminal)
         (ret_code, _) = subprocess.getstatusoutput(str_to_run_in_terminal)
         if (ret_code == 0):
-          print("Compilation succeeds")
+          print("Compilation succeeds for Program: " + program_file[program_file.rfind('/') + 1:] + ", with alu: " + alu_file + ", with grid size: " + num_pipeline_stages + " * " + num_alus_per_stage)
           sys.exit(0)
 
-    print("Compilation fails")
+    print("Compilation fails for Program: " + program_file[program_file.rfind('/') + 1:] + ", with alu: " + alu_file + ", with grid size: " + num_pipeline_stages + " * " + num_alus_per_stage)
+
 if __name__ == "__main__":
     main(sys.argv)
