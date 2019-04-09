@@ -27,7 +27,6 @@ def main(argv):
       mode = str(argv[7])
 
       # Run compile_with_chipmunk.py
-      "python3 compile_with_chipmunk.py domino_programs/blue_increase.c 2 example_alus/nested_ifs.stateful_alu 2 2 sample2 serial cex_mode"
       (ret_code,output) = subprocess.getstatusoutput("python3 compile_with_chipmunk.py " + program_file + " " + group_size + " " + alu_file + " " + num_pipeline_stages + " " + num_alus_per_stage + " " + sketch_name + " " + parallel_or_serial + " " + mode)
       print(output)
 
