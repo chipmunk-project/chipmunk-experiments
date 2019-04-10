@@ -9,7 +9,7 @@ import subprocess
 def main(argv):
     """Main program."""
     if len(argv) != 9 :
-        print("Usage: python3 " + argv[0] + " <program file> <group size> <alu file> <number of pipeline stages> " +
+        print("Usage: python3 " + argv[0] + " <domino program file> <group size> <alu file> <number of pipeline stages> " +
               "<number of stateless/stateful ALUs per stage> " +
               "<sketch_name (w/o file extension)> <parallel/serial> " +
               "<cex_mode/hole_elimination_mode>")
