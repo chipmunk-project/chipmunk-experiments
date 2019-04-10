@@ -1,0 +1,1 @@
+Compilation succeeds for Program: rcp.c, with alu: example_alus/if_else_raw.stateful_alu, with grid size: 3 * 2
