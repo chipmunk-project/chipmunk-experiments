@@ -8,11 +8,9 @@ import subprocess
 
 def main(argv):
     """Main program."""
-    if len(argv) != 9 :
+    if len(argv) != 6 :
         print("Usage: python3 " + argv[0] + " <domino program file> <group size> <alu file> <number of pipeline stages> " +
-              "<number of stateless/stateful ALUs per stage> " +
-              "<sketch_name (w/o file extension)> <parallel/serial> " +
-              "<cex_mode/hole_elimination_mode>")
+              "<number of stateless/stateful ALUs per stage> ")
         exit(1)
     # program_file means the original domino program
     program_file = str(argv[1])
@@ -20,9 +18,9 @@ def main(argv):
     alu_file = str(argv[3])
     num_pipeline_stages = str(argv[4])
     num_alus_per_stage = str(argv[5])
-    sketch_name = str(argv[6])
-    parallel_or_serial = str(argv[7])
-    mode = str(argv[8])
+#    sketch_name = str(argv[6])
+#    parallel_or_serial = str(argv[7])
+#    mode = str(argv[8])
 
     # Run canonicalizer
     (ret_code,
@@ -55,7 +53,7 @@ def main(argv):
         # Print the current situation
         print("Current compilation file is " + sketch_file_name)
         # Get the string to run in terminal
-        str_to_run_in_terminal = "iterative_solver " + sketch_file_name + " " + alu_file + " " + num_pipeline_stages + " " + num_alus_per_stage + " " + sketch_name + " " + parallel_or_serial + " " + mode
+        str_to_run_in_terminal = "iterative_solver " + sketch_file_name + " " + alu_file + " " + num_pipeline_stages + " " + num_alus_per_stage
         (ret_code, _) = subprocess.getstatusoutput(str_to_run_in_terminal)
         if (ret_code == 0):
           print("Compilation succeeds for Program: " + program_file[program_file.rfind('/') + 1:] + ", with alu: " + alu_file + ", with grid size: " + num_pipeline_stages + " * " + num_alus_per_stage)
