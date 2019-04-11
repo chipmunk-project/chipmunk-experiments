@@ -1,1 +1,11 @@
-Compilation succeeds for Program: rcp.c, with alu: example_alus/if_else_raw.stateful_alu, with grid size: 3 * 2
+1. Compilation succeeds for Program: rcp.c, with alu: example_alus/if_else_raw.stateful_alu, with grid size: 3 * 2
+
+2. Compilation succeeds for Program: sampling.c, with alu: example_alus/if_else_raw.stateful_alu, with grid size: 2 * 1
+
+3. Compilation succeeds for Program: blue_decrease.c, with alu: example_alus/pred_raw.stateful_alu, with grid size: 2 * 2
+
+4. Compilation succeeds for Program: blue_decrease_with_2_stateful_vars.c, with alu: example_alus/pred_raw.stateful_alu, with grid size: 3 * 3
+
+5. Compilation succeeds for Program: blue_decrease_remove_one_stateful_var.c, with alu: example_alus/sub.stateful_alu, with grid size: 3 * 3
+
+6. 

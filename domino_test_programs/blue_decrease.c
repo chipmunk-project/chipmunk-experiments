@@ -1,4 +1,4 @@
-#define FREEZE_TIME 10
+#define FREEZE_TIME 2
 #define DELTA1 1
 #define DELTA2 2
 #define QMAX 5
