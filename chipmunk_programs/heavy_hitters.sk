@@ -1,0 +1,41 @@
+/* 
+// Original program: 
+struct Packet{
+    int sport;
+    int dport;
+    int pkt_3;
+    int pkt_0;
+    int pkt_1;
+    int pkt_2;
+};
+int state_group_2_state_0 = { 0 };
+int state_group_1_state_0 = { 0 };
+int state_group_0_state_0 = { 0 };
+void func(struct Packet p){
+p.pkt_0=p.pkt_0;
+p.pkt_1=p.pkt_1;
+p.pkt_2=p.pkt_2;
+if (state_group_2_state_0>100&&state_group_2_state_0<1000&&state_group_1_state_0>100&&state_group_1_state_0<1000&&state_group_0_state_0>100&&state_group_0_state_0<1000) {p.pkt_3=0;
+
+;}else {p.pkt_3=1;
+
+;}
+state_group_2_state_0+=1;
+state_group_1_state_0+=1;
+state_group_0_state_0+=1;
+} */
+
+|StateAndPacket| program (|StateAndPacket| state_and_packet) {
+state_and_packet.pkt_0=state_and_packet.pkt_0;
+state_and_packet.pkt_1=state_and_packet.pkt_1;
+state_and_packet.pkt_2=state_and_packet.pkt_2;
+if (state_and_packet.state_group_2_state_0>0&&state_and_packet.state_group_2_state_0<3&&state_and_packet.state_group_1_state_0>0&&state_and_packet.state_group_1_state_0<3&&state_and_packet.state_group_0_state_0>0&&state_and_packet.state_group_0_state_0<3) {state_and_packet.pkt_3=0;
+
+;}else {state_and_packet.pkt_3=1;
+
+;}
+state_and_packet.state_group_2_state_0+=1;
+state_and_packet.state_group_1_state_0+=1;
+state_and_packet.state_group_0_state_0+=1;
+  return state_and_packet;
+}

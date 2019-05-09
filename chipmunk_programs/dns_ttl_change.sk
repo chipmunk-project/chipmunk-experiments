@@ -1,0 +1,69 @@
+/* 
+// Original program: 
+/* 
+// Original program: 
+struct Packet {
+  int sport;
+  int rdata;
+  int ttl;
+  int id;
+};
+
+#define NUM_RECORDS 10000
+
+int seen [NUM_RECORDS] = {0};
+int last_ttl[NUM_RECORDS] = {0};
+int ttl_change[NUM_RECORDS] = {0};
+
+void func(struct Packet p) {
+  p.id = p.rdata;
+  if (seen[p.id] == 0) {
+    seen[p.id] = 1;
+    last_ttl[p.id] = p.ttl;
+    ttl_change[p.id] = 0;
+  }
+  else {
+    if (last_ttl[p.id] != p.ttl) {
+      last_ttl[p.id] = p.ttl;
+      ttl_change[p.id] += 1;
+    }
+  }
+}
+ */
+
+struct Packet{
+    int sport;
+    int pkt_0;
+    int pkt_2;
+    int pkt_1;
+};
+int state_0 = { 0 };
+int state_1 = { 0 };
+int state_2 = { 0 };
+void func(struct Packet p) {
+p.pkt_1=p.pkt_0;
+if (state_0==0) {state_0=1;
+state_1=p.pkt_2;
+state_2=0;
+;}else {if (state_1!=p.pkt_2) {state_1=p.pkt_2;
+state_2+=1;
+;}
+;}
+
+}
+ */
+
+|StateAndPacket| program (|StateAndPacket| state_and_packet) {
+state_and_packet.pkt_1=state_and_packet.pkt_0;
+if (state_and_packet.state_0==0) {state_and_packet.state_0=1;
+state_and_packet.state_1=state_and_packet.pkt_2;
+state_and_packet.state_2=0;
+
+;}else {if (state_and_packet.state_1!=state_and_packet.pkt_2) {state_and_packet.state_1=state_and_packet.pkt_2;
+state_and_packet.state_2+=1;
+
+;}
+
+;}
+  return state_and_packet;
+}
