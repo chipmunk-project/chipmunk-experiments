@@ -8,4 +8,6 @@
 
 5. Compilation succeeds for Program: blue_decrease_remove_one_stateful_var.c, with alu: example_alus/sub.stateful_alu, with grid size: 3 * 3
 
-6. 
+6. Compilation succeeds for Program: marple_tcp_nmo.c, with alu: example_alus/pred_raw.stateful_alu, with grid size: 3 * 2
+
+7. 
