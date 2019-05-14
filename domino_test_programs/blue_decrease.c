@@ -1,6 +1,6 @@
-#define FREEZE_TIME 2
+#define FREEZE_TIME 1
 #define DELTA1 1
-#define DELTA2 2
+#define DELTA2 1
 #define QMAX 5
 
 struct Packet {
