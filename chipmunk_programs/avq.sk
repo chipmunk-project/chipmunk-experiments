@@ -1,45 +1,5 @@
 /* 
 // Original program: 
-/* 
-// Original program: 
-#define ALPHA 5
-#define GAMMA 2
-#define CAPACITY 10
-#define BUFFER 3
-
-struct Packet {
-  int bytes;
-  int time;
-  int mark;
-  int min;
-  int max;
-  int max_vq;
-};
-
-int vq = 0;
-int capacity = 0;
-int last_time = 0;
-
-void func(struct Packet p) {
-  // Update virtual queue size
-  vq = ((vq - capacity * (p.time - last_time)) < 0) ? 0 : (vq - capacity * (p.time - last_time));
-
-  // Mark or drop packet in real queue
-  if (vq + p.bytes > BUFFER) {
-    p.mark = 1;
-  } else {
-    vq = vq + p.bytes;
-  }
-
-  // Update virtual capacity
-  p.min = ((capacity + ALPHA * GAMMA * CAPACITY * (p.time -last_time)) < CAPACITY) ? (capacity + ALPHA * GAMMA * CAPACITY * (p.time -last_time)) : CAPACITY;
-  p.max = (p.min - ALPHA * p.bytes < 0) ? 0 : p.min - ALPHA * p.bytes;
-  capacity = p.max;
-
-  last_time = p.time;
-}
- */
-
 struct Packet{
     int pkt_2;
     int pkt_0;
@@ -48,32 +8,32 @@ struct Packet{
     int pkt_4;
     int max_vq;
 };
-int state_2 = 0;
-int state_1 = 0;
-int state_0 = 0;
-void func(struct Packet p) {
-state_2=((state_2-state_1*(p.pkt_0-state_0))<0) ? 0 : (state_2-state_1*(p.pkt_0-state_0));
-if (state_2+p.pkt_2>3) {p.pkt_1=1;
-;}else {state_2=state_2+p.pkt_2;
-;}
-p.pkt_3=((state_1+5*2*10*(p.pkt_0-state_0))<10) ? (state_1+5*2*10*(p.pkt_0-state_0)) : 10;
-p.pkt_4=(p.pkt_3-5*p.pkt_2<0) ? 0 : p.pkt_3-5*p.pkt_2;
-state_1=p.pkt_4;
-state_0=p.pkt_0;
+int state_group_2_state_0 = 0;
+int state_group_1_state_0 = 0;
+int state_group_0_state_0 = 0;
+void func(struct Packet p){
+state_group_2_state_0=((state_group_2_state_0-state_group_1_state_0*(p.pkt_0-state_group_0_state_0))<0) ? 0 : (state_group_2_state_0-state_group_1_state_0*(p.pkt_0-state_group_0_state_0));
+if (state_group_2_state_0+p.pkt_2>3) {p.pkt_1=1;
 
-}
- */
+;}else {state_group_2_state_0=state_group_2_state_0+p.pkt_2;
+
+;}
+p.pkt_3=((state_group_1_state_0+5*2*10*(p.pkt_0-state_group_0_state_0))<10) ? (state_group_1_state_0+5*2*10*(p.pkt_0-state_group_0_state_0)) : 10;
+p.pkt_4=(p.pkt_3-5*p.pkt_2<0) ? 0 : p.pkt_3-5*p.pkt_2;
+state_group_1_state_0=p.pkt_4;
+state_group_0_state_0=p.pkt_0;
+} */
 
 |StateAndPacket| program (|StateAndPacket| state_and_packet) {
-state_and_packet.state_2=((state_and_packet.state_2-state_and_packet.state_1*(state_and_packet.pkt_0-state_and_packet.state_0))<0) ? 0 : (state_and_packet.state_2-state_and_packet.state_1*(state_and_packet.pkt_0-state_and_packet.state_0));
-if (state_and_packet.state_2+state_and_packet.pkt_2>3) {state_and_packet.pkt_1=1;
+state_and_packet.state_group_2_state_0=((state_and_packet.state_group_2_state_0-state_and_packet.state_group_1_state_0*(state_and_packet.pkt_0-state_and_packet.state_group_0_state_0))<0) ? 0 : (state_and_packet.state_group_2_state_0-state_and_packet.state_group_1_state_0*(state_and_packet.pkt_0-state_and_packet.state_group_0_state_0));
+if (state_and_packet.state_group_2_state_0+state_and_packet.pkt_2>3) {state_and_packet.pkt_1=1;
 
-;}else {state_and_packet.state_2=state_and_packet.state_2+state_and_packet.pkt_2;
+;}else {state_and_packet.state_group_2_state_0=state_and_packet.state_group_2_state_0+state_and_packet.pkt_2;
 
 ;}
-state_and_packet.pkt_3=((state_and_packet.state_1+5*2*10*(state_and_packet.pkt_0-state_and_packet.state_0))<10) ? (state_and_packet.state_1+5*2*10*(state_and_packet.pkt_0-state_and_packet.state_0)) : 10;
+state_and_packet.pkt_3=((state_and_packet.state_group_1_state_0+5*2*10*(state_and_packet.pkt_0-state_and_packet.state_group_0_state_0))<10) ? (state_and_packet.state_group_1_state_0+5*2*10*(state_and_packet.pkt_0-state_and_packet.state_group_0_state_0)) : 10;
 state_and_packet.pkt_4=(state_and_packet.pkt_3-5*state_and_packet.pkt_2<0) ? 0 : state_and_packet.pkt_3-5*state_and_packet.pkt_2;
-state_and_packet.state_1=state_and_packet.pkt_4;
-state_and_packet.state_0=state_and_packet.pkt_0;
+state_and_packet.state_group_1_state_0=state_and_packet.pkt_4;
+state_and_packet.state_group_0_state_0=state_and_packet.pkt_0;
   return state_and_packet;
 }
