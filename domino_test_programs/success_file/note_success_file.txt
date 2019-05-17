@@ -1,0 +1,16 @@
+1. Compilation succeeds for Program: rcp.c, with alu: example_alus/if_else_raw.stateful_alu, with grid size: 3 * 2
+
+2. Compilation succeeds for Program: sampling.c, with alu: example_alus/if_else_raw.stateful_alu, with grid size: 2 * 1
+
+3. Compilation succeeds for Program: marple_tcp_nmo.c, with alu: example_alus/pred_raw.stateful_alu, with grid size: 3 * 2
+
+4. Compilation succeeds for Program: marple_new_flow.c, with alu: example_alus/pred_raw.stateful_alu, with grid size: 2 * 2 
+cmd line: iterative_solver /tmp/marple_new_flow.sk example_alus/pred_raw.stateful_alu chipc/templates/stateless_alu.j2 2 2 10
+
+5. Compilation succeeds for Program: blue_increase.c, with alu: example_alus/sub.stateful_alu, with grid size: 4 * 3
+Compilation time around 25-30 seconds with cyclops server
+cmd line: time iterative_solver /tmp/blue_increase.sk example_alus/pred_raw.stateful_alu templates/stateless_alu_arith.j2 4 3 10 --parallel --parallel-sketch
+
+6. Compilation succeeds for Program: blue_decrease.c, with alu: example_alus/sub.stateful_alu, with grid size: 4 * 3
+Compilation time around 40-50 seconds with cyclops server
+time iterative_solver /tmp/blue_decrease.sk example_alus/sub.stateful_alu templates/stateless_alu_arith.j2 4 3 10 --parallel --parallel-sketch
