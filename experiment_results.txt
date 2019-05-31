@@ -1,0 +1,7 @@
+                     # of mutators   statelfu_alu  gride_size  success_rate_for_iterative_solver   success_rate_for_domino
+marple_new_flow.c    10              pred_raw      4*4         40%
+marple_tcp_nmo.c     10		     pred_raw      4*4         70%
+sampling.c           10		     if_else_raw   3*3         80%
+rcp.c                10              pred_raw      4*4         20%
+blue_decrease.c      10              sub
+blue_increase.c      10              pred_raw
