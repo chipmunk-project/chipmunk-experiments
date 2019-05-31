@@ -1,5 +1,5 @@
 // Sample every 30th packet in a flow
-#define N 30
+#define N 3
 
 struct Packet {
   int sample;
