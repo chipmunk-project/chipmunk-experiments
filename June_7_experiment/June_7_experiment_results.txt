@@ -1,0 +1,7 @@
+                     # of mutators   statelfu_alu stateless_alu     gride_size  success_rate_for_iterative_solver   success_rate_for_domino
+
+sampling.c           10              if_else_raw  stateless_alu         3*3         80%(file 1 2 3 4 5 7 8 10)
+(cmd line: time python3 run_iterative_solver_automatically.py sampling 10 example_alus/if_else_raw.stateful_alu stateless_alus/stateless_alu.j2 3 3 10
+time: real    3m25.165s)
+
+
