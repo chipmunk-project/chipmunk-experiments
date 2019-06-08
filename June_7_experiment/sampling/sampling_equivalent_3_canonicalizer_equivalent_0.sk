@@ -1,0 +1,71 @@
+/* 
+// Original program: 
+struct Packet{
+    int pkt_3;
+    int pkt_4;
+    int pkt_5;
+    int pkt_2;
+    int pkt_1;
+    int pkt_0;
+};
+int state_group_0_state_0 = 0;
+void func(struct Packet p){
+p.pkt_0=state_group_0_state_0;
+p.pkt_1=p.pkt_0;
+p.pkt_2=p.pkt_1;
+p.pkt_2=p.pkt_2+1-1;
+p.pkt_3=p.pkt_3+1-1;
+p.pkt_4=p.pkt_4+1-1;
+p.pkt_5=p.pkt_5+1-1;
+p.pkt_5=p.pkt_2;
+p.pkt_4=p.pkt_5;
+if (!(!(!(p.pkt_4==3-1)))) {if (!(p.pkt_4==3-1)) {p.pkt_3=0;
+p.pkt_4=p.pkt_4+1;
+
+;}
+
+;}else {if (!(!(p.pkt_4==3-1))) {if (p.pkt_4==3-1) {p.pkt_3=1;
+p.pkt_4=0;
+
+;}
+
+;}
+
+;}
+p.pkt_5=p.pkt_4;
+p.pkt_2=p.pkt_5;
+p.pkt_1=p.pkt_2;
+p.pkt_0=p.pkt_1;
+state_group_0_state_0=p.pkt_0;
+} */
+
+|StateAndPacket| program (|StateAndPacket| state_and_packet) {
+state_and_packet.pkt_0=state_and_packet.state_group_0_state_0;
+state_and_packet.pkt_1=state_and_packet.pkt_0;
+state_and_packet.pkt_2=state_and_packet.pkt_1;
+state_and_packet.pkt_2=state_and_packet.pkt_2+1-1;
+state_and_packet.pkt_3=state_and_packet.pkt_3+1-1;
+state_and_packet.pkt_4=state_and_packet.pkt_4+1-1;
+state_and_packet.pkt_5=state_and_packet.pkt_5+1-1;
+state_and_packet.pkt_5=state_and_packet.pkt_2;
+state_and_packet.pkt_4=state_and_packet.pkt_5;
+if (!(!(!(state_and_packet.pkt_4==3-1)))) {if (!(state_and_packet.pkt_4==3-1)) {state_and_packet.pkt_3=0;
+state_and_packet.pkt_4=state_and_packet.pkt_4+1;
+
+;}
+
+;}else {if (!(!(state_and_packet.pkt_4==3-1))) {if (state_and_packet.pkt_4==3-1) {state_and_packet.pkt_3=1;
+state_and_packet.pkt_4=0;
+
+;}
+
+;}
+
+;}
+state_and_packet.pkt_5=state_and_packet.pkt_4;
+state_and_packet.pkt_2=state_and_packet.pkt_5;
+state_and_packet.pkt_1=state_and_packet.pkt_2;
+state_and_packet.pkt_0=state_and_packet.pkt_1;
+state_and_packet.state_group_0_state_0=state_and_packet.pkt_0;
+  return state_and_packet;
+}
