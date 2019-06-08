@@ -1,6 +1,6 @@
                      # of mutators   statelfu_alu stateless_alu     gride_size  success_rate_for_iterative_solver   success_rate_for_domino
 1.
-sampling.c           10              if_else_raw  stateless_alu         3*3         70%(file 1 2 4 6 8 9 10)
+sampling.c           10              if_else_raw  stateless_alu         3*3         70%(file 1 2 4 6 8 9 10)           10%(file 3)
 (cmd line: time python3 run_iterative_solver_automatically.py sampling 10 example_alus/if_else_raw.stateful_alu stateless_alus/stateless_alu.j2 3 3 10
 time: real    2m32.176s)ok
 
@@ -45,9 +45,9 @@ marple_tcp_nmo.c     10              pred_raw     stateless_alu_arith   4*4     
 time: real    151m38.066s)ok
 
 10.
-blue_decrease.c      10              sub          stateless_alu         4*3         
+blue_decrease.c      10              sub          stateless_alu         4*3        20%(file 1 4) 
 (cmd line: time python3 run_iterative_solver_automatically.py blue_decrease 10 example_alus/sub.stateful_alu stateless_alus/stateless_alu.j2 4 3 10
-time: real    )
+time: real    0m49.339s)
 
 11.
 blue_increase.c      10              sub          stateless_alu         4*3        30%(file 1 4 9) 
