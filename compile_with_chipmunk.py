@@ -57,7 +57,15 @@ def main(argv):
         # Get the string to run in terminal
         str_to_run_in_terminal = "iterative_solver " + sketch_file_name + " " + stateful_alu_file + " " + stateless_alu_file + " " + \
                                  num_pipeline_stages + " " + num_alus_per_stage + " " + input_bits + " --parallel-sketch"
-        (ret_code, _) = subprocess.getstatusoutput(str_to_run_in_terminal)
+        (ret_code, output) = subprocess.getstatusoutput(str_to_run_in_terminal)
+        iterative_solver_output_file_name = '/tmp/' + \
+					    sketch_file_name[sketch_file_name.rfind('/') + 1:sketch_file_name.rfind('.')] + '_' + \
+                                            'with_stateful_alu' + '_' + \
+                                            stateful_alu_file[stateful_alu_file.rfind('/') + 1:stateful_alu_file.rfind('.')] + '_' + \
+                                            'with_stateless_alu' + '_' + \
+                                            stateless_alu_file[stateless_alu_file.rfind('/') + 1:stateless_alu_file.rfind('.')] + '.output'
+        with open(iterative_solver_output_file_name, 'w') as file:
+            file.write(output)
         # It will return 0 if one of the grouped files get successful compilation
         if (ret_code == 0):
           print("Compilation succeeds for Program: " + program_file[program_file.rfind('/') + 1:] + ", with stateful alu: " + stateful_alu_file + "and stateless alu: " + stateless_alu_file + ", with grid size: " + num_pipeline_stages + " * " + num_alus_per_stage)
