@@ -1,0 +1,10 @@
+Iteration #1
+Total number of hole bits is 219
+Sketch file is marple_tcp_nmo_equivalent_3_canonicalizer_equivalent_0_pred_raw_stateless_alu_arith_3_3_codegen_iteration_1.sk
+Synthesis succeeded with 2 bits, proceeding to verification.
+Verification failed, use returned counterexamples {'pkt_0': 0} {'state_group_1_state_0': 5, 'state_group_0_state_0': 0}
+Iteration #2
+Total number of hole bits is 219
+Sketch file is marple_tcp_nmo_equivalent_3_canonicalizer_equivalent_0_pred_raw_stateless_alu_arith_3_3_codegen_iteration_2.sk
+Compilation failed.
+Output left in marple_tcp_nmo_equivalent_3_canonicalizer_equivalent_0_pred_raw_stateless_alu_arith_3_3.errors

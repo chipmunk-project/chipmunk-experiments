@@ -1,0 +1,15 @@
+Iteration #1
+Total number of hole bits is 192
+Sketch file is sampling_equivalent_3_canonicalizer_equivalent_0_if_else_raw_stateless_alu_3_3_codegen_iteration_1.sk
+Synthesis succeeded with 2 bits, proceeding to verification.
+Verification failed, use returned counterexamples {'pkt_0': 0} {'state_group_0_state_0': 6}
+Iteration #2
+Total number of hole bits is 192
+Sketch file is sampling_equivalent_3_canonicalizer_equivalent_0_if_else_raw_stateless_alu_3_3_codegen_iteration_2.sk
+Synthesis succeeded with 2 bits, proceeding to verification.
+Verification failed, use returned counterexamples {'pkt_0': 0} {'state_group_0_state_0': 5}
+Iteration #3
+Total number of hole bits is 192
+Sketch file is sampling_equivalent_3_canonicalizer_equivalent_0_if_else_raw_stateless_alu_3_3_codegen_iteration_3.sk
+Compilation failed.
+Output left in sampling_equivalent_3_canonicalizer_equivalent_0_if_else_raw_stateless_alu_3_3.errors

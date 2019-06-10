@@ -1,0 +1,56 @@
+                     # of mutators   statelfu_alu stateless_alu     gride_size  success_rate_for_iterative_solver   success_rate_for_domino
+1.
+sampling.c           10              if_else_raw  stateless_alu         3*3         80%(file 1 2 4 5 6 7 8 10)         0%(file )
+(cmd line: time python3 run_iterative_solver_automatically.py sampling 10 example_alus/if_else_raw.stateful_alu stateless_alus/stateless_alu.j2 3 3 10
+time: real    1m25.254s)ok
+
+2.
+rcp.c                10              pred_raw     stateless_alu_arith   3*3         0%
+(cmd line: time python3 run_iterative_solver_automatically.py sampling 10 example_alus/if_else_raw.stateful_alu stateless_alus/stateless_alu_arith.j2 3 3 10
+time: real    0m50.714s)ok
+
+3.
+rcp.c                10              pred_raw     stateless_alu         4*4         40%(file 1 2 6 10)                 0%(file )
+(cmd line: time python3 run_iterative_solver_automatically.py rcp 10 example_alus/pred_raw.stateful_alu stateless_alus/stateless_alu.j2 4 4 10
+time: real    5m57.182s)ok
+
+4.
+blue_increase.c      10              pred_raw     stateless_alu         4*3         30%(file 2 6 10)
+(cmd line: time python3 run_iterative_solver_automatically.py blue_increase 10 example_alus/pred_raw.stateful_alu stateless_alus/stateless_alu.j2 4 3 10
+time: real    4m17.660s)ok
+
+5.
+marple_new_flow.c    10              pred_raw     stateless_alu         4*4         40%(file 1 2 6 10)                 0%(file )
+(cmd line: time python3 run_iterative_solver_automatically.py marple_new_flow 10 example_alus/pred_raw.stateful_alu stateless_alus/stateless_alu.j2 4 4 10
+time: real    2m42.138s)ok
+
+6.
+marple_tcp_nmo.c     10              pred_raw     stateless_alu         3*3         70%(file 2 4 5 6 7 8 10)
+(time python3 run_iterative_solver_automatically.py marple_tcp_nmo 10 example_alus/pred_raw.stateful_alu stateless_alus/stateless_alu.j2 3 3 10
+time: real    1m9.928s)ok
+
+7.
+marple_tcp_nmo.c     10              pred_raw     stateless_alu_arith   3*3         0%(file )
+(cmd line: time python3 run_iterative_solver_automatically.py marple_tcp_nmo 10 example_alus/pred_raw.stateful_alu stateless_alus/stateless_alu_arith.j2 3 3 10
+time: real    1m3.668s)ok
+
+8.
+marple_tcp_nmo.c     10              pred_raw     stateless_alu         4*4         0%(file )                          0%(file 3)
+(cmd line: time python3 run_iterative_solver_automatically.py marple_tcp_nmo 10 example_alus/pred_raw.stateful_alu stateless_alus/stateless_alu.j2 4 4 10
+time: real    )
+
+9.(Cut by keyboard)
+marple_tcp_nmo.c     10              pred_raw     stateless_alu_arith   4*4         %(file )
+(cmd line: time python3 run_iterative_solver_automatically.py marple_tcp_nmo 10 example_alus/pred_raw.stateful_alu stateless_alus/stateless_alu_arith.j2 4 4 10
+time: real    151m38.066s)ok
+
+10.
+blue_decrease.c      10              sub          stateless_alu         4*3        0%(file )                           0%(file )
+(cmd line: time python3 run_iterative_solver_automatically.py blue_decrease 10 example_alus/sub.stateful_alu stateless_alus/stateless_alu.j2 4 3 10
+time: real    )
+
+11.
+blue_increase.c      10              sub          stateless_alu         4*3        100%(file 1 2 3 4 5 6 7 8 9 10)       0%(file )
+(cmd line: time python3 run_iterative_solver_automatically.py blue_increase 10 example_alus/sub.stateful_alu stateless_alus/stateless_alu.j2 4 3 10
+time: real    9m41.321s)
+
