@@ -1,0 +1,5 @@
+Use the mutator with only random number 1 2 3 4 5 7 8
+
+Instruction(take rcp.c as an example):
+Step 1: mutator ~/chipmunk_experiments/domino_experiment_programs/rcp.c
+Step 2: time python3 run_iterative_solver_automatically.py rcp 10 example_alus/pred_raw.stateful_alu stateless_alus/stateless_alu.j2 4 4 10
