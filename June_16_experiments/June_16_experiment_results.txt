@@ -1,4 +1,4 @@
-Note1: No. mutation
+Note1: No.2 3 7 mutation
 Note2: synthesis time boundary 30 minutes
 Note3: domino grid size 20*10
                      # of mutators   statelfu_alu stateless_alu     gride_size  success_rate_for_iterative_solver   success_rate_for_domino
@@ -73,5 +73,25 @@ time: real    232m27.711s)ok
 flowlets.c           10              pred_raw     stateless_alu_arith   4*5         0%                                  100%
 (cmd line: time python3 run_iterative_solver_automatically.py flowlets 10 example_alus/pred_raw.stateful_alu stateless_alus/stateless_alu_arith.j2 4 5 10
 time: real    300m26.973s)ok
+
+15.
+marple_new_flow.c    10              pred_raw     stateless_alu         4*4         100%                                0%
+(cmd line: time python3 run_iterative_solver_automatically.py marple_new_flow 10 example_alus/pred_raw.stateful_alu stateless_alus/stateless_alu.j2 4 4 10
+time: real    1m48.442s)ok
+
+16.(This has not finished running)
+marple_new_flow.c    10              pred_raw     stateless_alu_arith   4*4         100%                                0%
+(cmd line: time python3 run_iterative_solver_automatically.py marple_new_flow 10 example_alus/pred_raw.stateful_alu stateless_alus/stateless_alu_arith.j2 4 4 10
+time: real    )
+
+17.
+marple_tcp_nmo.c     10              pred_raw     stateless_alu         3*3         100%                                0%
+(time python3 run_iterative_solver_automatically.py marple_tcp_nmo 10 example_alus/pred_raw.stateful_alu stateless_alus/stateless_alu.j2 3 3 10
+time: real    1m25.723s)ok
+
+18.
+marple_tcp_nmo.c     10              pred_raw     stateless_alu_arith   3*3         100%                                0%
+(cmd line: time python3 run_iterative_solver_automatically.py marple_tcp_nmo 10 example_alus/pred_raw.stateful_alu stateless_alus/stateless_alu_arith.j2 3 3 10
+time: real    1m20.291s)ok
 
 
