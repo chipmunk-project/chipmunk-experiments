@@ -1,0 +1,20 @@
+Iteration #1
+Total number of hole bits is 512
+Sketch file is flowlets_equivalent_7_canonicalizer_equivalent_0_pred_raw_stateless_alu_4_5_codegen_iteration_1.sk
+Synthesis succeeded with 2 bits, proceeding to verification.
+Verification failed, use returned counterexamples {'pkt_2': 7, 'pkt_3': 0, 'pkt_0': 1, 'pkt_1': 0} {'state_group_1_state_0': 5, 'state_group_0_state_0': 0}
+Iteration #2
+Total number of hole bits is 512
+Sketch file is flowlets_equivalent_7_canonicalizer_equivalent_0_pred_raw_stateless_alu_4_5_codegen_iteration_2.sk
+Synthesis succeeded with 2 bits, proceeding to verification.
+Verification failed, use returned counterexamples {'pkt_2': 2, 'pkt_3': 0, 'pkt_0': 0, 'pkt_1': 5} {'state_group_1_state_0': 1, 'state_group_0_state_0': 0}
+Iteration #3
+Total number of hole bits is 512
+Sketch file is flowlets_equivalent_7_canonicalizer_equivalent_0_pred_raw_stateless_alu_4_5_codegen_iteration_3.sk
+Synthesis succeeded with 2 bits, proceeding to verification.
+Verification failed, use returned counterexamples {'pkt_2': 4, 'pkt_3': 0, 'pkt_0': 0, 'pkt_1': 194} {'state_group_1_state_0': 1, 'state_group_0_state_0': 1}
+Iteration #4
+Total number of hole bits is 512
+Sketch file is flowlets_equivalent_7_canonicalizer_equivalent_0_pred_raw_stateless_alu_4_5_codegen_iteration_4.sk
+Compilation failed.
+Output left in flowlets_equivalent_7_canonicalizer_equivalent_0_pred_raw_stateless_alu_4_5.errors
