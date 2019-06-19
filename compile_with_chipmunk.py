@@ -63,7 +63,8 @@ def main(argv):
                                             'with_stateful_alu' + '_' + \
                                             stateful_alu_file[stateful_alu_file.rfind('/') + 1:stateful_alu_file.rfind('.')] + '_' + \
                                             'with_stateless_alu' + '_' + \
-                                            stateless_alu_file[stateless_alu_file.rfind('/') + 1:stateless_alu_file.rfind('.')] + '.output'
+                                            stateless_alu_file[stateless_alu_file.rfind('/') + 1:stateless_alu_file.rfind('.')] + \
+                                            '_' + num_pipeline_stages + '_' + num_alus_per_stage  + '.output'
         with open(iterative_solver_output_file_name, 'w') as file:
             file.write(output)
         # It will return 0 if one of the grouped files get successful compilation
