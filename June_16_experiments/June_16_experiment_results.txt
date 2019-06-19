@@ -1,6 +1,7 @@
 Note1: No.2 3 7 mutation
 Note2: synthesis time boundary 30 minutes
 Note3: domino grid size 20*10
+Note4: 3*4 means 3 stages and 4 alus per stage
                      # of mutators   statelfu_alu stateless_alu     grid_size  success_rate_for_iterative_solver   success_rate_for_domino                  M1  M2  M3  M4  M5  M6  M7  M8  M9  M10
 
 1.
