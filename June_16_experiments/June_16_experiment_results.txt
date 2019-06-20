@@ -81,7 +81,7 @@ marple_new_flow.c    10              pred_raw     stateless_alu         4*4     
 time: real    1m48.442s)ok
 
 16.(This has not finished running)
-marple_new_flow.c    10              pred_raw     stateless_alu_arith   4*4         100%                                0%
+marple_new_flow.c    10              pred_raw     stateless_alu_arith   4*4         0%                                0%
 (cmd line: time python3 run_iterative_solver_automatically.py marple_new_flow 10 example_alus/pred_raw.stateful_alu stateless_alus/stateless_alu_arith.j2 4 4 10
 time: real    )
 

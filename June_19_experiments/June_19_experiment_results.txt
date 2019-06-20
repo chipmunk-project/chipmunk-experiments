@@ -29,18 +29,18 @@ time: real    1m50.359s)ok
 
 2.STATEFUL_FW(Not finish yet)
 2.1(Optimal)
-stateful_fw.c        10              pred_raw     stateless_alu          4*5         100%                              90%(file file 1 2 3 4 5 7 8 9 10)   15*4 15*4 19*4 15*5 15*4 21*4 15*4 14*4 12*4 14*4
+stateful_fw.c        10              pred_raw     stateless_alu          4*5         100%                              90%(file 1 2 3 4 5 7 8 9 10)   15*4 15*4 19*4 15*5 15*4 21*4 15*4 14*4 12*4 14*4
 (cmd line: time python3 run_iterative_solver_automatically.py stateful_fw 10 example_alus/pred_raw.stateful_alu stateless_alus/stateless_alu.j2 4 5 32
 time: real    90m50.384s)ok
 
 2.2(time running out but quite possible to get failed)
-stateful_fw.c        10              pred_raw     stateless_alu_arith    4*5         0%                                90%(file file 1 2 3 4 5 7 8 9 10)
+stateful_fw.c        10              pred_raw     stateless_alu_arith    4*5         0%                                90%(file 1 2 3 4 5 7 8 9 10)
 (cmd line: time python3 run_iterative_solver_automatically.py stateful_fw 10 example_alus/pred_raw.stateful_alu stateless_alus/stateless_alu_arith.j2 4 5 32
 time: real    )
 
 3.SAMPLING(ok)
 3.1
-sampling.c           10              if_else_raw  stateless_alu          3*3         100%                              0%                                    4*2 4*2 5*2 4*2 4*2 4*2 5*2 4*2 5*2 4*2
+sampling.c           10              if_else_raw  stateless_alu          3*3         100%                              0%                                    
 (cmd line: time python3 run_iterative_solver_automatically.py sampling 10 example_alus/if_else_raw.stateful_alu stateless_alus/stateless_alu.j2 3 3 32
 time: real    1m24.231s)ok
 
@@ -55,19 +55,19 @@ sampling.c           10              if_else_raw  stateless_alu          3*2    
 time: real    1m21.715s)ok
 
 3.4
-sampling.c           10              if_else_raw  stateless_alu          2*2         100%                              0%                                    4*2 4*2 5*2 4*2 4*2 4*2 5*2 4*2 5*2 4*2
+sampling.c           10              if_else_raw  stateless_alu          2*2         100%                              0%                                   
 (cmd line: time python3 run_iterative_solver_automatically.py sampling 10 example_alus/if_else_raw.stateful_alu stateless_alus/stateless_alu.j2 2 2 32
 time: real    1m15.340s)ok
 
 3.5(Optimal)
-sampling.c           10              if_else_raw  stateless_alu          2*1         100%                              0%                                    4*2 4*2 5*2 4*2 4*2 4*2 5*2 4*2 5*2 4*2
+sampling.c           10              if_else_raw  stateless_alu          2*1         100%                              0%                                   
 (cmd line: time python3 run_iterative_solver_automatically.py sampling 10 example_alus/if_else_raw.stateful_alu stateless_alus/stateless_alu.j2 2 1 32
 time: real    1m11.231s)ok
 
 
 4.BLUE_INCREASE(ok)
 4.1
-blue_increase.c      10              pred_raw     stateless_alu          4*3         100%                               0%                                    4*2 4*2 5*2 4*2 4*2 4*2 5*2 4*2 5*2 4*2
+blue_increase.c      10              pred_raw     stateless_alu          4*3         100%                               0%                                    
 (cmd line: time python3 run_iterative_solver_automatically.py blue_increase 10 example_alus/pred_raw.stateful_alu stateless_alus/stateless_alu.j2 4 3 32
 time: real    2m15.808s)ok
 
@@ -93,7 +93,7 @@ time: real    2m1.710s)ok
 
 5.BLUE_DECREASE(ok)
 5.1
-blue_decrease.c      10              sub          stateless_alu         4*3        100%                                 0%                                   4*2 4*2 5*2 4*2 4*2 4*2 5*2 4*2 5*2 4*2
+blue_decrease.c      10              sub          stateless_alu         4*3        100%                                 0%                                   
 (cmd line: time python3 run_iterative_solver_automatically.py blue_decrease 10 example_alus/sub.stateful_alu stateless_alus/stateless_alu.j2 4 3 32
 time: real    9m20.407s)ok
 
@@ -121,7 +121,7 @@ time: real    )
 
 7.MARPLE_NEW_FLOW(ok)
 7.1
-marple_new_flow.c    10              pred_raw     stateless_alu         4*4         100%                                0%                                  3*2 3*2 4*2 3*2 3*2 3*2 4*2 3*2 4*2 3*2
+marple_new_flow.c    10              pred_raw     stateless_alu         4*4         100%                                0%                                  
 (cmd line: time python3 run_iterative_solver_automatically.py marple_new_flow 10 example_alus/pred_raw.stateful_alu stateless_alus/stateless_alu.j2 4 4 32
 time: real    3m42.677s)ok
 
@@ -141,13 +141,13 @@ marple_new_flow.c    10              pred_raw     stateless_alu         2*2     
 time: real    1m16.746s)ok
 
 7.5(This has not finished running)
-marple_new_flow.c    10              pred_raw     stateless_alu_arith   4*4         100%                                0%
+marple_new_flow.c    10              pred_raw     stateless_alu_arith   4*4         0%                                0%
 (cmd line: time python3 run_iterative_solver_automatically.py marple_new_flow 10 example_alus/pred_raw.stateful_alu stateless_alus/stateless_alu_arith.j2 4 4 32
 time: real    )
 
 8.MARPLE_TCP_NMO(ok)
 8.1
-marple_tcp_nmo.c     10              pred_raw     stateless_alu         3*3         100%                                0%                               15*2 15*2 19*2 15*2 15*2 21*2 9*3 14*2 11*2 14*2
+marple_tcp_nmo.c     10              pred_raw     stateless_alu         3*3         100%                                0%                              
 (time python3 run_iterative_solver_automatically.py marple_tcp_nmo 10 example_alus/pred_raw.stateful_alu stateless_alus/stateless_alu.j2 3 3 32
 time: real    1m26.357s)ok
 
