@@ -37,7 +37,8 @@ time: real    90m50.384s)ok
 2.2(time running out but quite possible to get failed)
 stateful_fw.c        10              pred_raw     stateless_alu_arith    4*(5+1)         0%                                90%(file 1 2 3 4 5 7 8 9 10)
 (cmd line: time python3 run_iterative_solver_automatically.py stateful_fw 10 example_alus/pred_raw.stateful_alu stateless_alus/stateless_alu_arith.j2 4 5 32
-time: real    )
+time: real    300m25.496s)ok
+Note: for the first mutator, we keep it running without setting timeout boundary, it does not give the compilation result after 15 hours so we just cut it.
 
 3.SAMPLING(ok)
 3.1
@@ -118,7 +119,7 @@ Note: I run this experiment for three times and two of them get 100% successful 
 6.2(time running out but quite possible to get failed)
 flowlets.c           10              pred_raw     stateless_alu_arith   4*(5+1)         0%                                  100%
 (cmd line: time python3 run_iterative_solver_automatically.py flowlets 10 example_alus/pred_raw.stateful_alu stateless_alus/stateless_alu_arith.j2 4 5 32
-time: real    )
+time: real    300m26.968s)ok
 
 7.MARPLE_NEW_FLOW(ok)
 7.1
@@ -141,10 +142,10 @@ marple_new_flow.c    10              pred_raw     stateless_alu         2*(2+1) 
 (cmd line: time python3 run_iterative_solver_automatically.py marple_new_flow 10 example_alus/pred_raw.stateful_alu stateless_alus/stateless_alu.j2 2 2 32
 time: real    1m16.746s)ok
 
-7.5(This has not finished running)
+7.5
 marple_new_flow.c    10              pred_raw     stateless_alu_arith   4*(4+1)         0%                                0%
 (cmd line: time python3 run_iterative_solver_automatically.py marple_new_flow 10 example_alus/pred_raw.stateful_alu stateless_alus/stateless_alu_arith.j2 4 4 32
-time: real    )
+time: real    300m23.426s)ok
 
 8.MARPLE_TCP_NMO(ok)
 8.1
