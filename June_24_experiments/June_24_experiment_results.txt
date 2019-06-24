@@ -1,0 +1,95 @@
+Note1: No.2 3 7 mutation
+Note2: synthesis time boundary 30 minutes
+Note3: domino grid size 20*10
+Note4: verification bit = 32
+Note5: 3*(4+1) means 3 stages and (4 stateless_alu + 1 stateful_alu) per stage
+Note6: Use synthesized_allocation
+                     # of mutators   statelfu_alu stateless_alu     grid_size  success_rate_for_iterative_solver   success_rate_for_domino                  M1  M2  M3  M4  M5  M6  M7  M8  M9  M10
+
+1.RCP(ok)
+1.1(optimal one)
+rcp.c                10              pred_raw     stateless_alu          3*(3+1)         100%                              100%
+(cmd line: time python3 run_iterative_solver_with_synthesized_allocation_automatically.py rcp 10 example_alus/pred_raw.stateful_alu stateless_alus/stateless_alu.j2 3 3 32
+time: real    1m38.865s)ok
+
+1.2
+rcp.c                10              pred_raw     stateless_alu_arith          3*(3+1)         100%                              100%
+(cmd line: time python3 run_iterative_solver_with_synthesized_allocation_automatically.py rcp 10 example_alus/pred_raw.stateful_alu stateless_alus/stateless_alu_arith.j2 3 3 32
+time: real    1m31.090s)ok
+
+2.STATEFUL_FW
+2.1(Optimal)
+stateful_fw.c        10              pred_raw     stateless_alu          4*(5+1)         100%                              90%(file 1 2 3 4 5 7 8 9 10)   15*4 15*4 19*4 15*5 15*4 21*4 15*4 14*4 12*4 14*4
+(cmd line: time python3 run_iterative_solver_with_synthesized_allocation_automatically.py stateful_fw 10 example_alus/pred_raw.stateful_alu stateless_alus/stateless_alu.j2 4 5 32
+time: real    153m44.312s)ok
+
+2.2(Have not run this yet)
+stateful_fw.c        10              pred_raw     stateless_alu_arith    4*(5+1)         0%                                90%(file 1 2 3 4 5 7 8 9 10)
+(cmd line: time python3 run_iterative_solver_with_synthesized_allocation_automatically.py stateful_fw 10 example_alus/pred_raw.stateful_alu stateless_alus/stateless_alu_arith.j2 4 5 32
+time: real    )
+
+3.SAMPLING(ok)
+3.1(Optimal)
+sampling.c           10              if_else_raw  stateless_alu          2*(1+1)         100%                              0%                                   
+(cmd line: time python3 run_iterative_solver_with_synthesized_allocation_automatically.py sampling 10 example_alus/if_else_raw.stateful_alu stateless_alus/stateless_alu.j2 2 1 32
+time: real    1m13.553s)ok
+
+3.1(Optimal)
+sampling.c           10              if_else_raw  stateless_alu_arith          2*(1+1)         0%                              0%
+(cmd line: time python3 run_iterative_solver_with_synthesized_allocation_automatically.py sampling 10 example_alus/if_else_raw.stateful_alu stateless_alus/stateless_alu_arith.j2 2 1 32
+time: real   0m57.519s)ok
+
+4.BLUE_INCREASE(ok)
+4.1(Optimal)
+blue_increase.c      10              pred_raw     stateless_alu          4*(2+1)         100%                               0%                                    
+(cmd line: time python3 run_iterative_solver_with_synthesized_allocation_automatically.py blue_increase 10 example_alus/pred_raw.stateful_alu stateless_alus/stateless_alu.j2 4 2 32
+time: real    2m19.868s)ok
+
+4.2
+blue_increase.c      10              pred_raw     stateless_alu_arith          4*(2+1)         100%                               0%
+(cmd line: time python3 run_iterative_solver_with_synthesized_allocation_automatically.py blue_increase 10 example_alus/pred_raw.stateful_alu stateless_alus/stateless_alu_arith.j2 4 2 32
+time: real    1m43.321s)ok
+
+5.BLUE_DECREASE(ok)
+5.1(Optimal)
+blue_decrease.c      10              sub          stateless_alu         4*(2+1)        100%                                 0%                                  
+(cmd line: time python3 run_iterative_solver_with_synthesized_allocation_automatically.py blue_decrease 10 example_alus/sub.stateful_alu stateless_alus/stateless_alu.j2 4 2 32
+time: real    3m2.477s)ok
+
+5.2
+blue_decrease.c      10              sub          stateless_alu_arith         4*(2+1)        100%                                 0%
+(cmd line: time python3 run_iterative_solver_with_synthesized_allocation_automatically.py blue_decrease 10 example_alus/sub.stateful_alu stateless_alus/stateless_alu_arith.j2 4 2 32
+time: real    2m21.223s)ok
+
+6.FLOWLETS
+6.1
+flowlets.c           10              pred_raw     stateless_alu         4*(5+1)         0%                                  100%                                9*4 9*4 8*4 9*4 9*4 7*4 7*4 8*4 9*4 8*4
+(cmd line: time python3 run_iterative_solver_with_synthesized_allocation_automatically.py flowlets 10 example_alus/pred_raw.stateful_alu stateless_alus/stateless_alu.j2 4 5 32
+time: real   300m30.465s)ok
+
+6.2(Have not run this yet)
+flowlets.c           10              pred_raw     stateless_alu_arith   4*(5+1)         0%                                  100%
+(cmd line: time python3 run_iterative_solver_with_synthesized_allocation_automatically.py flowlets 10 example_alus/pred_raw.stateful_alu stateless_alus/stateless_alu_arith.j2 4 5 32
+time: real    )
+
+7.MARPLE_NEW_FLOW(ok)
+7.1(Optimal)
+marple_new_flow.c    10              pred_raw     stateless_alu         2*(2+1)         100%                                0%
+(cmd line: time python3 run_iterative_solver_with_synthesized_allocation_automatically.py marple_new_flow 10 example_alus/pred_raw.stateful_alu stateless_alus/stateless_alu.j2 2 2 32
+time: real    1m18.976s)ok
+
+7.2
+marple_new_flow.c    10              pred_raw     stateless_alu_arith   2*(2+1)         0%                                0%
+(cmd line: time python3 run_iterative_solver_with_synthesized_allocation_automatically.py marple_new_flow 10 example_alus/pred_raw.stateful_alu stateless_alus/stateless_alu_arith.j2 2 2 32
+time: real    0m58.432s)ok
+
+8.MARPLE_TCP_NMO(ok)
+8.1(Optimal)
+marple_tcp_nmo.c     10              pred_raw     stateless_alu         3*(2+1)         100%                                0%                             
+(time python3 run_iterative_solver_with_synthesized_allocation_automatically.py marple_tcp_nmo 10 example_alus/pred_raw.stateful_alu stateless_alus/stateless_alu.j2 3 2 32
+time: real    1m26.667s)ok
+
+8.2(Optimal)
+marple_tcp_nmo.c     10              pred_raw     stateless_alu_arith         3*(2+1)         100%                                0%
+(time python3 run_iterative_solver_with_synthesized_allocation_automatically.py marple_tcp_nmo 10 example_alus/pred_raw.stateful_alu stateless_alus/stateless_alu_arith.j2 3 2 32
+time: real    1m20.656s)ok
