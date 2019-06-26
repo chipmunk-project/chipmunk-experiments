@@ -18,14 +18,14 @@ time: real    2m56.020s)ok
 
 2.STATEFUL_FW(Not Finished)
 2.1(Optimal)
-stateful_fw.c        10              pred_raw     stateless_alu          4*(5+1)         100%                              90%(file 1 2 3 4 5 7 8 9 10)   15*4 15*4 19*4 15*5 15*4 21*4 15*4 14*4 12*4 14*4
+stateful_fw.c        10              pred_raw     stateless_alu          4*(5+1)         Not finished yet                              90%(file 1 2 3 4 5 7 8 9 10)   15*4 15*4 19*4 15*5 15*4 21*4 15*4 14*4 12*4 14*4
 (cmd line: time python3 run_iterative_solver_automatically.py stateful_fw 10 example_alus/pred_raw.stateful_alu stateless_alus/stateless_alu.j2 4 5 29
 time: real    )
 
 2.2(time running out but quite possible to get failed)
-stateful_fw.c        10              pred_raw     stateless_alu_arith    4*(5+1)         0%                                90%(file 1 2 3 4 5 7 8 9 10)
+stateful_fw.c        10              pred_raw     stateless_alu_arith    4*(5+1)         Not tried yet                                90%(file 1 2 3 4 5 7 8 9 10)
 (cmd line: time python3 run_iterative_solver_automatically.py stateful_fw 10 example_alus/pred_raw.stateful_alu stateless_alus/stateless_alu_arith.j2 4 5 29
-time: real    300m25.496s)
+time: real    )
 Note: for the first mutator, we keep it running without setting timeout boundary, it does not give the compilation result after 15 hours so we just cut it.
 
 3.SAMPLING(ok)
@@ -63,15 +63,15 @@ time: real    2m37.729s)ok
 
 6.FLOWLETS(Not Finished)
 6.1
-flowlets.c           10              pred_raw     stateless_alu         4*(5+1)         90%(file 1 2 4 5 6 7 8 9 10)        100%                                9*4 9*4 8*4 9*4 9*4 7*4 7*4 8*4 9*4 8*4
+flowlets.c           10              pred_raw     stateless_alu         4*(5+1)           0%                              100%                   9*4 9*4 8*4 9*4 9*4 7*4 7*4 8*4 9*4 8*4
 (cmd line: time python3 run_iterative_solver_automatically.py flowlets 10 example_alus/pred_raw.stateful_alu stateless_alus/stateless_alu.j2 4 5 29
-time: real   run for three times around 230m40s  159m58.152s  156m50.783s)ok
+time: real   run for three times around )
 Note: I run this experiment for three times and two of them get 100% successful compilation rate while the rest get 90% successful compilation rate
 
 6.2(time running out but quite possible to get failed)
-flowlets.c           10              pred_raw     stateless_alu_arith   4*(5+1)         0%                                  100%
+flowlets.c           10              pred_raw     stateless_alu_arith   4*(5+1)         Not tried yet                                  100%
 (cmd line: time python3 run_iterative_solver_automatically.py flowlets 10 example_alus/pred_raw.stateful_alu stateless_alus/stateless_alu_arith.j2 4 5 29
-time: real    300m26.968s)ok
+time: real    )
 
 7.MARPLE_NEW_FLOW(ok)
 7.1(Optimal)
