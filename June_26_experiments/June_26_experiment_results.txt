@@ -63,10 +63,9 @@ time: real    2m24.145s)ok
 
 6.FLOWLETS(Not Finished)
 6.1
-flowlets.c           10              pred_raw     stateless_alu         4*(5+1)          Be running now                       100%                   9*4 9*4 8*4 9*4 9*4 7*4 7*4 8*4 9*4 8*4
+flowlets.c           10              pred_raw     stateless_alu         4*(5+1)          70%(1 2 3 7 8 9 10)                       100%                   9*4 9*4 8*4 9*4 9*4 7*4 7*4 8*4 9*4 8*4
 (cmd line: time python3 run_iterative_solver_automatically.py flowlets 10 example_alus/pred_raw.stateful_alu stateless_alus/stateless_alu.j2 4 5 10
-time: real   run for three times around )
-Note: I run this experiment for three times and two of them get 100% successful compilation rate while the rest get 90% successful compilation rate
+time: real   608m8.990s)
 
 6.2(time running out but quite possible to get failed)
 flowlets.c           10              pred_raw     stateless_alu_arith   4*(5+1)         Not tried yet(no need to run)                  100%
