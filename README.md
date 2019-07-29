@@ -10,3 +10,5 @@ test domino program with chipmunk
 #TODO: add run_domino_automatically.py to domino-examples repo
 5. Then run domino on all generated mutators in domino-examples folder
    (e.g. python3 run_domino_automatically.py rcp banzai_atoms/pred_raw.sk 10)
+# We should forget about all the experiments run in June because we make some changes for our python script
+

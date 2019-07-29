@@ -9,11 +9,12 @@ import subprocess
 
 def main(argv):
     """Main program."""
-    if len(argv) != 8 :
+    if len(argv) != 9 :
         print("Usage: python3 " + argv[0] + " <domino program file> <group size> <stateful alu file> <stateless alu file> " +
               "<number of pipeline stages> " +
               "<number of stateless/stateful ALUs per stage> " +
-              "<input bits>")
+              "<input bits> " +
+               "bit_size_for_constant_set")
         exit(1)
     # program_file means the original domino program
     program_file = str(argv[1])
@@ -23,6 +24,7 @@ def main(argv):
     num_pipeline_stages = str(argv[5])
     num_alus_per_stage = str(argv[6])
     input_bits = str(argv[7])
+    bit_size_for_constant_set = str(argv[8])
 
     # Run canonicalizer
     (ret_code,
@@ -45,6 +47,10 @@ def main(argv):
             '/') + 1:canonicalizer_file.rfind('.')] + "_equivalent_" + str(i) + ".c"
         (ret_code, output) = subprocess.getstatusoutput("domino_to_chipmunk " +
                                                         group_file)
+        (ret_code, constant_set) = subprocess.getstatusoutput("constant_set " + \
+                                                             group_file + " " +\
+                                                             bit_size_for_constant_set)
+        constant_set = "'" + constant_set + "'"
         chipmunk_file = group_file[:group_file.rfind('.')] + ".sk"
         with open(chipmunk_file, 'w') as file:
             file.write(output)
@@ -56,7 +62,9 @@ def main(argv):
         print("Current compilation file is " + sketch_file_name)
         # Get the string to run in terminal
         str_to_run_in_terminal = "iterative_solver " + sketch_file_name + " " + stateful_alu_file + " " + stateless_alu_file + " " + \
-                                 num_pipeline_stages + " " + num_alus_per_stage + " " + input_bits + " --parallel-sketch --synthesized-allocation"
+                                 num_pipeline_stages + " " + num_alus_per_stage + " " + \
+                                 constant_set + " " + input_bits + " --parallel-sketch " + \
+                                 "--synthesized-allocation"
         (ret_code, output) = subprocess.getstatusoutput(str_to_run_in_terminal)
         iterative_solver_output_file_name = '/tmp/' + \
 					    sketch_file_name[sketch_file_name.rfind('/') + 1:sketch_file_name.rfind('.')] + '_' + \
@@ -64,7 +72,7 @@ def main(argv):
                                             stateful_alu_file[stateful_alu_file.rfind('/') + 1:stateful_alu_file.rfind('.')] + '_' + \
                                             'with_stateless_alu' + '_' + \
                                             stateless_alu_file[stateless_alu_file.rfind('/') + 1:stateless_alu_file.rfind('.')] + \
-                                            '_' + num_pipeline_stages + '_' + num_alus_per_stage + '_with_synthesized_allocation' + \
+                                            '_' + num_pipeline_stages + '_' + num_alus_per_stage  + '_with_synthesized_allocation' + \
                                             '.output'
         with open(iterative_solver_output_file_name, 'w') as file:
             file.write(output)
