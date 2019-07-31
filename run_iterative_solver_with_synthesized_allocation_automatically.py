@@ -48,6 +48,11 @@ def main(argv):
         if (ret_code == 0):
             print("Success")
             Sum += 1
+        # Kill all the zombie processes for 5 times
+        # TODO: figure out the best way to kill all the zombie processes
+        for j in range(5):
+            (ret_code, output) = subprocess.getstatusoutput("killall cegis")
+
     print("The successful compilation rate for " + domino_file_name +
       " mutators by iterative_solver is " + str(Sum/total_num_of_files))
 
