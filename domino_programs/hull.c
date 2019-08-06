@@ -1,4 +1,4 @@
-#define DRAIN_RATE 10
+#define DRAIN_RATE 1
 #define ECN_THRESH 20
 
 int counter   = ECN_THRESH;
