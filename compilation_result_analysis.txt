@@ -1,0 +1,59 @@
+Program_name                 Compilation_result                   Why failed
+avq                               Fail            The # of stages and # of phv per stage are too big to try
+
+blue_decrease                    Success
+blue_increase                    Success
+codel                             Fail            The # of stages and # of phv per stage are too big to try
+
+conga                             Fail            Because there is %(mod) in program. I think we can try with some modification
+
+dns_ttl_change                    Fail            Previously, we have not tried because of if_else condition is not supported
+                                                  in stateless alu. In addition, the # of stages and # of phv per stage are also large
+
+flowlets                        running in cyclop
+flowlets_intuitive              
+ftp_monitoring                    Fail            Previously, we have not tried because of if_else condition is not supported
+                                                  in stateless alu. Also, # of stages and # of phv per stage are large
+
+hash_pipe_first_stage             Fail            Previously, we have not tried because of if_else condition is not supported
+                                                  in stateless alu. Also # of phv per stage are too big to try
+
+hash_pipe_second_stage            Fail            Previously, we have not tried because of if_else condition is not supported
+                                                  in stateless alu. Also, the # of phv per stage are too big to try
+
+heavy_hitters                     Fail            The # of stages and # of phv per stage are too big to try
+
+hula_forwarding                   Fail            The # of stages and # of phv per stage are too big to try
+
+hula_probe                        Fail            The # of stages and # of phv per stage are too big to try
+
+hull                              Fail            I am trying to run this now because I think this is most likely to 
+                                                  get successful compilation but we need to provide enough grid size
+
+leanr_filter                      Fail            Previously, we have not tried because of if_else condition is not supported
+                                                  in stateless alu. But we can try this for now.
+
+many_ip_domains                   Fail            The # of stages and # of phv per stage are too big to try
+
+marple_new_flow                 Success
+marple_tcp_nmo                  Success
+rcp                             Success
+red                               Fail            The # of stages and # of phv per stage are too big to try
+
+sampling                        Success
+snap_heavy_hitter                 Fail            Previously, we have not tried because of if_else condition is not supported
+                                                  in stateless alu. I think this can be the 3rd program to try compilation
+
+spam-detection                    Fail            Previously, we have not tried because of if_else condition is not supported
+                                                  in stateless alu. I think this can be the 2nd program to try run compilation
+
+stateful_fw                     Success
+
+stfq                              Fail           Previously, we have not tried because of if_else condition is not supported
+                                                 in stateless alu. I think this can be the 4th program to try run compilation
+
+superspreader                     Fail           The # of stages and # of phv per stage are too big to try
+
+trTCM                             Fail           Failed for domino, so there is no meaning to run this benchmark
+
+Note: their graph can be seen in the graph folder
