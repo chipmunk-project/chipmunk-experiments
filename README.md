@@ -11,4 +11,4 @@ test domino program with chipmunk
 5. Then run domino on all generated mutators in domino-examples folder
    (e.g. python3 run_domino_automatically.py rcp banzai_atoms/pred_raw.sk 10)
 
-# Note: August 15, 2019: The python script has been changed. So the above command lines need to be updated accordingly.
+Note: August 15, 2019: The python script has been changed. So the above command lines need to be updated accordingly.
