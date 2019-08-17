@@ -19,7 +19,7 @@ void stfq(struct Packet pkt) {
 //                  pkt.dport)
 //            % NUM_FLOWS;
 
-  pkt.id = pkt.id; 
+//  pkt.id = pkt.id; 
   if ((last_finish[pkt.id] > TIME_MIN) && (pkt.virtual_time < last_finish[pkt.id])) {
     pkt.start = last_finish[pkt.id];
     last_finish[pkt.id] += pkt.length;

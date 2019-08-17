@@ -10,7 +10,7 @@ conga                             Fail            Because there is %(mod) in pro
 dns_ttl_change                    Fail            Previously, we have not tried because of if_else condition is not supported
                                                   in stateless alu. In addition, the # of stages and # of phv per stage are also large
 
-flowlets                        running in cyclop
+flowlets                         Success          compile in 102 hours for 4*5
 flowlets_intuitive              
 ftp_monitoring                    Fail            Previously, we have not tried because of if_else condition is not supported
                                                   in stateless alu. Also, # of stages and # of phv per stage are large
@@ -23,15 +23,14 @@ hash_pipe_second_stage            Fail            Previously, we have not tried 
 
 heavy_hitters                     Fail            The # of stages and # of phv per stage are too big to try
 
-hula_forwarding                   Fail            The # of stages and # of phv per stage are too big to try
+hula_forwarding                   Success         compile in 1106m29.084s for 4*4
 
 hula_probe                        Fail            The # of stages and # of phv per stage are too big to try
 
 hull                              Fail            I am trying to run this now because I think this is most likely to 
                                                   get successful compilation but we need to provide enough grid size
 
-leanr_filter                      Fail            Previously, we have not tried because of if_else condition is not supported
-                                                  in stateless alu. But we can try this for now.
+leanr_filter                      Success         compile in 3mins for 5*3
 
 many_ip_domains                   Fail            The # of stages and # of phv per stage are too big to try
 
@@ -47,10 +46,9 @@ snap_heavy_hitter                 Fail            Previously, we have not tried 
 spam-detection                    Fail            Previously, we have not tried because of if_else condition is not supported
                                                   in stateless alu. I think this can be the 2nd program to try run compilation
 
-stateful_fw                     Success
+stateful_fw                     Success           compile in 51 hours for 4*5
 
-stfq                              Fail           Previously, we have not tried because of if_else condition is not supported
-                                                 in stateless alu. I think this can be the 4th program to try run compilation
+stfq                            Success           compile in 10 mins for 4*8
 
 superspreader                     Fail           The # of stages and # of phv per stage are too big to try
 

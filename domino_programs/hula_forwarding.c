@@ -24,8 +24,8 @@ int flowlet_hop[NUM_FLOWLETS] = {0}; // next hop for each flowlet, update on new
 // This is triggered by the arrival of data packets
 void func(struct Packet p) {
   // TODO: compiler bug
-  p.flow_hash = p.flow_hash;
-  p.meta_data_dst_tor = p.meta_data_dst_tor;
+//  p.flow_hash = p.flow_hash;
+//  p.meta_data_dst_tor = p.meta_data_dst_tor;
 
   if (p.cur_time - flowlet_time[p.flow_hash] > FLOWLET_TOUT) {
     p.tmp = best_hop[p.meta_data_dst_tor];
