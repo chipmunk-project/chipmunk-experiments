@@ -5,7 +5,7 @@ blue_decrease                    Success
 blue_increase                    Success
 codel                             Fail            The # of stages and # of phv per stage are too big to try
 
-conga                             Fail            Because there is %(mod) in program. I think we can try with some modification
+conga                             Success         Remove the % in original program and compile for 1*5 in 14seconds
 
 dns_ttl_change                    Fail            Previously, we have not tried because of if_else condition is not supported
                                                   in stateless alu. In addition, the # of stages and # of phv per stage are also large
@@ -40,11 +40,9 @@ rcp                             Success
 red                               Fail            The # of stages and # of phv per stage are too big to try
 
 sampling                        Success
-snap_heavy_hitter                 Fail            Previously, we have not tried because of if_else condition is not supported
-                                                  in stateless alu. I think this can be the 3rd program to try compilation
+snap_heavy_hitter               Success           compil in 41.747s but the constant set should be {0,1,2,3,999}
 
-spam-detection                    Fail            Previously, we have not tried because of if_else condition is not supported
-                                                  in stateless alu. I think this can be the 2nd program to try run compilation
+spam-detection                  Success           compile in 22 seconds for 1*1 but the constant set should be {0,1,2,3,999,1000} 
 
 stateful_fw                     Success           compile in 51 hours for 4*5
 
