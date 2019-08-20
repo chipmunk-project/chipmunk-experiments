@@ -7,8 +7,7 @@ codel                             Fail            The # of stages and # of phv p
 
 conga                             Success         Remove the % in original program and compile for 1*5 in 14seconds
 
-dns_ttl_change                    Fail            Previously, we have not tried because of if_else condition is not supported
-                                                  in stateless alu. In addition, the # of stages and # of phv per stage are also large
+dns_ttl_change                    Fail            (error "line 70 column 28: Sort mismatch at argument #2 for function (declare-fun < (Int Int) Bool) supplied sort is Bool")
 
 flowlets                         Success          compile in 102 hours for 4*5
 flowlets_intuitive              
@@ -21,7 +20,7 @@ hash_pipe_first_stage             Fail            Previously, we have not tried 
 hash_pipe_second_stage            Fail            Previously, we have not tried because of if_else condition is not supported
                                                   in stateless alu. Also, the # of phv per stage are too big to try
 
-heavy_hitters                     Fail            The # of stages and # of phv per stage are too big to try
+heavy_hitters                     Fail            (error "line 25 column 41: Sorts Int and Bool are incompatible")
 
 hula_forwarding                   Success         compile in 1106m29.084s for 4*4
 
@@ -32,7 +31,7 @@ hull                              Fail            I am trying to run this now be
 
 leanr_filter                      Success         compile in 3mins for 5*3
 
-many_ip_domains                   Fail            The # of stages and # of phv per stage are too big to try
+many_ip_domains                   Fail            (error "line 34 column 29: Sorts Int and Bool are incompatible") 
 
 marple_new_flow                 Success
 marple_tcp_nmo                  Success
@@ -48,7 +47,7 @@ stateful_fw                     Success           compile in 51 hours for 4*5
 
 stfq                            Success           compile in 10 mins for 4*8
 
-superspreader                     Fail           The # of stages and # of phv per stage are too big to try
+superspreader                     Fail            (error "line 44 column 29: Sorts Int and Bool are incompatible")
 
 trTCM                             Fail           Failed for domino, so there is no meaning to run this benchmark
 
