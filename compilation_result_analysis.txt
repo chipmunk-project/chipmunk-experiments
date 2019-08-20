@@ -32,6 +32,7 @@ hull                              Fail            I am trying to run this now be
 leanr_filter                      Success         compile in 3mins for 5*3
 
 many_ip_domains                   Fail            (error "line 34 column 29: Sorts Int and Bool are incompatible") 
+                                                  But this get success when we manually fill in some holes and compile directly with sketch
 
 marple_new_flow                 Success
 marple_tcp_nmo                  Success
