@@ -12,7 +12,7 @@ int last_ttl[NUM_RECORDS] = {0};
 int ttl_change[NUM_RECORDS] = {0};
 
 void func(struct Packet p) {
-  p.id = p.rdata;
+//  p.id = p.rdata;
   if (seen[p.id] == 0) {
     seen[p.id] = 1;
     last_ttl[p.id] = p.ttl;

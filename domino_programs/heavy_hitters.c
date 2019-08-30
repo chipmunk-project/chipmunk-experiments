@@ -22,9 +22,9 @@ void func(struct Packet p) {
 //  p.sketch1_idx = hash2a(p.sport, p.dport) % NUM_ENTRIES;
 //  p.sketch2_idx = hash2b(p.sport, p.dport) % NUM_ENTRIES;
 //  p.sketch3_idx = hash2c(p.sport, p.dport) % NUM_ENTRIES;
-  p.sketch1_idx = p.sketch1_idx;
-  p.sketch2_idx = p.sketch2_idx;
-  p.sketch3_idx = p.sketch3_idx;
+//  p.sketch1_idx = p.sketch1_idx;
+//  p.sketch2_idx = p.sketch2_idx;
+//  p.sketch3_idx = p.sketch3_idx;
   if (sketch_cnt_1[p.sketch1_idx] > low_th && sketch_cnt_1[p.sketch1_idx] < hi_th &&
 	    sketch_cnt_2[p.sketch2_idx] > low_th && sketch_cnt_2[p.sketch2_idx] < hi_th &&
 	    sketch_cnt_3[p.sketch3_idx] > low_th && sketch_cnt_3[p.sketch3_idx] < hi_th) {

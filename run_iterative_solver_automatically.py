@@ -45,6 +45,7 @@ def main(argv):
         (ret_code, output) = subprocess.getstatusoutput(content_in_cmd_line)
         end_time = time.time()
         print("time used for this compilation is " + str(end_time - start_time))
+        print("Compilation Result is " + str(ret_code))
         if (ret_code == 0):
             print("Success")
             Sum += 1
