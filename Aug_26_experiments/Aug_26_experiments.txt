@@ -5,18 +5,19 @@ Note4: verification bit = 10
 Note5: 3*(4+1) means 3 stages and (4 stateless_alu + 1 stateful_alu) per stage
                      # of mutators   statelfu_alu stateless_alu     grid_size  success_rate_for_iterative_solver   success_rate_for_domino
 
-1.BLUE_INCREASE
+1.BLUE_INCREASE(ok)
 1.1 (Optimal)
-blue_increase.c      10              pred_raw     stateless_alu          4*(2+1)          Not run yet                         Not run yet
-(cmd line: time python3 run_iterative_solver_automatically.py blue_increase 10 1 example_alus/stateful_alus/pred_raw.alu example_alus/stateless_alus/stateless_alu.alu 4 2 10 2
-time: real    )
-280.64 + 458.30 + 705.90 + 
+blue_increase.c      10              pred_raw     stateless_alu          4*(2+1)          100%                         Not run yet
+(cmd line: time python3 run_iterative_solver_automatically.py blue_increase 10 1 example_alus/stateful_alus/pred_raw.alu example_alus/stateless_alus/stateless_alu_arith.alu 4 2 10 2
+time: real    74m15.425s)
+191.12 + 531.61 + 355.93 + 1036.16 + 347.66 + 241.14 + 514.78 + 79.86 + 885.65 + 270.62
 
-2.BLUE_DECREASE
+2.BLUE_DECREASE(ok)
 2.1 (Optimal)
-blue_decrease.c      10              sub          stateless_alu          4*(2+1)          Not run yet                         Not run yet
+blue_decrease.c      10              sub          stateless_alu          4*(2+1)          80%(No.5 and No.10 failed because of timeout)          Not run yet
 (cmd line: time python3 run_iterative_solver_automatically.py blue_decrease 10 1 example_alus/stateful_alus/sub.stateful_alu example_alus/stateless_alus/stateless_alu.alu 4 2 10 2
-time: real    )
+time: real    4416m6s)
+8139.08 + 2046.75 + 332.81 + 3015.32 + 100563.73(F) + 36132.60 + 40690.60 + 5183.53 + 2473.67 + 66389.01(F)
 
 3.CONGA(ok)
 3.1 (optimal)
@@ -25,19 +26,23 @@ conga.c              10              pair          stateless_alu         1*(5+1)
 time: real    4m39.740s)
 21.68 + 42.16 + 23.15 + 23.91 + 33.24 + 22.71 + 22.71 + 24.20 + 23.27 + 41.88
 
-4.FLOWLETS
+4.FLOWLETS(ok in EC2 VM)
 4.1 (optimal)
-flowlets.c          10              
+flowlets.c          10              pred_raw      stateless_alu          4*(5+1)              100%         
+(cmd line: time python3 run_iterative_solver_automatically.py flowlets 10 1 example_alus/stateful_alus/pred_raw.alu example_alus/stateless_alus/stateless_alu.alu 4 5 10 2 
+time: real    2544m56.691s)
+6549.68 + 57918.53 + 17084.63 + 4132.01 + 6066.66 + 3768.08 + 8682.51 + 3244.61 + 12397.29 + 32852.47
 
 5.HULA_FORWARDING
 hula_forwarding.c
+time python3 compile_with_chipmunk.py domino_programs/hula_forwarding.c 10 1 example_alus/stateful_alus/pred_raw.alu example_alus/stateless_alus/stateless_alu.alu 4 4 10 2
 
-
-6.LEARN_FILTER
+6.LEARN_FILTER(ok)
 6.1 (optimal)
-leanr_filter.c       10              raw          stateless_alu          5*(3+3)         Not test yet                   Not tested yet
-(cmd line: 
-time: real    )
+learn_filter.c       10              raw          stateless_alu          5*(3+3)         100%                   Not tested yet
+(cmd line: python3 run_iterative_solver_automatically.py learn_filter 10 1 example_alus/stateful_alus/raw.alu example_alus/stateless_alus/stateless_alu.alu 5 3 10 2
+time: real    32m24s)
+258.40 + 73.84 + 162.39 + 254.41 + 191.34 + 165.21 + 199.10 + 240.73 + 94.77 + 304.39
 
 7.MARPLE_NEW_FLOW(ok)
 7.1(Optimal)
@@ -82,6 +87,8 @@ time: real    11m20.174s)
 
 13.STATEFUL_FW
 stateful_fw.c
+(cmd line: time python3 run_iterative_solver_automatically.py stateful_fw 1 example_alus/stateful_alus/pred_raw.alu example_alus/stateless_alus/stateless_alu.alu 4 5 10 2
+time: real    )
 
 14.STFQ
 stfq.c                10            nested_if      stateless_alu         4*(8+)          Not run yet                         Not run yet
