@@ -1,0 +1,12 @@
+SKETCH version 1.7.5
+Benchmark = sampling_equivalent_10_canonicalizer_equivalent_0_if_else_raw_stateless_alu_2_1_codegen_iteration_1.sk
+    [0;32m[1566954314.8170 - DEBUG] Running stage 'parse' -- Parse the program from a file[0m
+    [0;32m[1566954315.0220 - DEBUG] Running stage 'preproc' -- Preprocessing (used for all further transformations)[0m
+samplin..tion_1.sk:7: Type mismatch int[5] !>= int[2][4]
+    [0;31m[1566954315.0770 - ERROR] [SKETCH] Error at node: Type mismatch int[5] !>= int[2][4] (at samplin..tion_1.sk:7)[0m
+    [0;32m[1566954315.0780 - DEBUG] [SKETCH] stack trace written to file: /home/xiangyug/.sketch/tmp/stacktrace.txt[0m
+    [0;32m[1566954315.0920 - DEBUG] [SKETCH] Last good program, from before stage PreprocessStage, dumped to:  /home/xiangyug/.sketch/tmp/error-last-program.txt[0m
+Total time = 352
+Command exited with non-zero status 1
+1.76user 0.20system 0:00.52elapsed 372%CPU (0avgtext+0avgdata 98408maxresident)k
+0inputs+160outputs (0major+24199minor)pagefaults 0swaps

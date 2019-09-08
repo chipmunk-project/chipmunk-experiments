@@ -1,0 +1,82 @@
+Iteration #1
+Total number of hole bits is 368
+Sketch file is blue_decrease_equivalent_5_canonicalizer_equivalent_0_sub_stateless_alu_arith_4_2_codegen_iteration_1.sk
+Synthesis succeeded with 2 bits, proceeding to verification.
+Verification failed.
+Use returned counterexamples {'pkt_1': 0, 'pkt_0': 11} {'state_group_0_state_0': 0, 'state_group_1_state_0': 0}
+updated constant array {'0', ' 10', ' 2', '11', ' 1', ' 3'}
+Iteration #2
+Total number of hole bits is 368
+Sketch file is blue_decrease_equivalent_5_canonicalizer_equivalent_0_sub_stateless_alu_arith_4_2_codegen_iteration_2.sk
+Synthesis succeeded with 2 bits, proceeding to verification.
+Verification failed.
+Use returned counterexamples {'pkt_1': 0, 'pkt_0': 10} {'state_group_0_state_0': 0, 'state_group_1_state_0': 0}
+updated constant array {'10', '0', ' 10', ' 2', '11', ' 1', ' 3'}
+Iteration #3
+Total number of hole bits is 368
+Sketch file is blue_decrease_equivalent_5_canonicalizer_equivalent_0_sub_stateless_alu_arith_4_2_codegen_iteration_3.sk
+Synthesis succeeded with 2 bits, proceeding to verification.
+Verification failed.
+Use returned counterexamples {'pkt_1': 0, 'pkt_0': 11} {'state_group_0_state_0': 0, 'state_group_1_state_0': 1}
+updated constant array {'10', '0', ' 10', ' 2', '11', '1', ' 1', ' 3'}
+Iteration #4
+Total number of hole bits is 368
+Sketch file is blue_decrease_equivalent_5_canonicalizer_equivalent_0_sub_stateless_alu_arith_4_2_codegen_iteration_4.sk
+Synthesis succeeded with 2 bits, proceeding to verification.
+Verification failed.
+Use returned counterexamples {'pkt_1': 0, 'pkt_0': 10} {'state_group_0_state_0': 0, 'state_group_1_state_0': 1}
+updated constant array {'10', '0', ' 10', ' 2', '11', '1', ' 1', ' 3'}
+Iteration #5
+Total number of hole bits is 368
+Sketch file is blue_decrease_equivalent_5_canonicalizer_equivalent_0_sub_stateless_alu_arith_4_2_codegen_iteration_5.sk
+Synthesis succeeded with 2 bits, proceeding to verification.
+Verification failed.
+Use returned counterexamples {'pkt_1': 0, 'pkt_0': 10} {'state_group_0_state_0': 0, 'state_group_1_state_0': 10}
+updated constant array {'10', '0', ' 10', ' 2', '11', '1', ' 1', ' 3'}
+Iteration #6
+Total number of hole bits is 368
+Sketch file is blue_decrease_equivalent_5_canonicalizer_equivalent_0_sub_stateless_alu_arith_4_2_codegen_iteration_6.sk
+Synthesis succeeded with 2 bits, proceeding to verification.
+Verification failed.
+Use returned counterexamples {'pkt_1': 0, 'pkt_0': 11} {'state_group_0_state_0': 0, 'state_group_1_state_0': 11}
+updated constant array {'10', '0', ' 10', ' 2', '11', '1', ' 1', ' 3'}
+Iteration #7
+Total number of hole bits is 368
+Sketch file is blue_decrease_equivalent_5_canonicalizer_equivalent_0_sub_stateless_alu_arith_4_2_codegen_iteration_7.sk
+Synthesis succeeded with 2 bits, proceeding to verification.
+Verification failed.
+Use returned counterexamples {'pkt_1': 0, 'pkt_0': 12} {'state_group_0_state_0': 0, 'state_group_1_state_0': 0}
+updated constant array {'10', '0', ' 10', ' 2', '12', '11', '1', ' 1', ' 3'}
+Iteration #8
+Total number of hole bits is 416
+Sketch file is blue_decrease_equivalent_5_canonicalizer_equivalent_0_sub_stateless_alu_arith_4_2_codegen_iteration_8.sk
+Synthesis succeeded with 2 bits, proceeding to verification.
+Verification failed.
+Use returned counterexamples {'pkt_1': 0, 'pkt_0': 12} {'state_group_0_state_0': 0, 'state_group_1_state_0': 1}
+updated constant array {'10', '0', ' 10', ' 2', '12', '11', '1', ' 1', ' 3'}
+Iteration #9
+Total number of hole bits is 416
+Sketch file is blue_decrease_equivalent_5_canonicalizer_equivalent_0_sub_stateless_alu_arith_4_2_codegen_iteration_9.sk
+Synthesis succeeded with 2 bits, proceeding to verification.
+Verification failed.
+Use returned counterexamples {'pkt_1': 0, 'pkt_0': 11} {'state_group_0_state_0': 1, 'state_group_1_state_0': 0}
+updated constant array {'10', '0', ' 10', ' 2', '12', '11', '1', ' 1', ' 3'}
+Iteration #10
+Total number of hole bits is 416
+Sketch file is blue_decrease_equivalent_5_canonicalizer_equivalent_0_sub_stateless_alu_arith_4_2_codegen_iteration_10.sk
+Synthesis succeeded with 2 bits, proceeding to verification.
+Verification failed.
+Use returned counterexamples {'pkt_1': 0, 'pkt_0': 6} {'state_group_0_state_0': 6, 'state_group_1_state_0': 0}
+updated constant array {'10', '0', '6', ' 10', ' 2', '12', '11', '1', ' 1', ' 3'}
+Iteration #11
+Total number of hole bits is 416
+Sketch file is blue_decrease_equivalent_5_canonicalizer_equivalent_0_sub_stateless_alu_arith_4_2_codegen_iteration_11.sk
+Synthesis succeeded with 2 bits, proceeding to verification.
+Verification failed.
+Use returned counterexamples {'pkt_1': 0, 'pkt_0': 12} {'state_group_0_state_0': 0, 'state_group_1_state_0': 2}
+updated constant array {'10', '0', '2', '6', ' 10', ' 2', '12', '11', '1', ' 1', ' 3'}
+Iteration #12
+Total number of hole bits is 416
+Sketch file is blue_decrease_equivalent_5_canonicalizer_equivalent_0_sub_stateless_alu_arith_4_2_codegen_iteration_12.sk
+Compilation failed.
+Output left in blue_decrease_equivalent_5_canonicalizer_equivalent_0_sub_stateless_alu_arith_4_2.errors

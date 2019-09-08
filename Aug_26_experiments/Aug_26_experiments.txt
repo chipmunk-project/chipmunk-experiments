@@ -5,21 +5,21 @@ Note4: verification bit = 10
 Note5: 3*(4+1) means 3 stages and (4 stateless_alu + 1 stateful_alu) per stage
                      # of mutators   statelfu_alu stateless_alu     grid_size  success_rate_for_iterative_solver   success_rate_for_domino
 
-1.BLUE_INCREASE(ok)
+1.BLUE_INCREASE(ok)Y
 1.1 (Optimal)
 blue_increase.c      10              pred_raw     stateless_alu          4*(2+1)          100%                         Not run yet
 (cmd line: time python3 run_iterative_solver_automatically.py blue_increase 10 1 example_alus/stateful_alus/pred_raw.alu example_alus/stateless_alus/stateless_alu_arith.alu 4 2 10 2
 time: real    74m15.425s)
 191.12 + 531.61 + 355.93 + 1036.16 + 347.66 + 241.14 + 514.78 + 79.86 + 885.65 + 270.62
 
-2.BLUE_DECREASE(ok)
+2.BLUE_DECREASE(ok)Y
 2.1 (Optimal)
 blue_decrease.c      10              sub          stateless_alu          4*(2+1)          80%(No.5 and No.10 failed because of timeout)          Not run yet
 (cmd line: time python3 run_iterative_solver_automatically.py blue_decrease 10 1 example_alus/stateful_alus/sub.stateful_alu example_alus/stateless_alus/stateless_alu.alu 4 2 10 2
 time: real    4416m6s)
 8139.08 + 2046.75 + 332.81 + 3015.32 + 100563.73(F) + 36132.60 + 40690.60 + 5183.53 + 2473.67 + 66389.01(F)
 
-3.CONGA(ok)
+3.CONGA(ok)Y
 3.1 (optimal)
 conga.c              10              pair          stateless_alu         1*(5+1)          100%                         Not run yet
 (cmd line: time python3 run_iterative_solver_automatically.py conga 10 2 example_alus/stateful_alus/pair.alu example_alus/stateless_alus/stateless_alu.alu 1 5 10 2 
@@ -37,49 +37,49 @@ time: real    2544m56.691s)
 hula_forwarding.c
 time python3 compile_with_chipmunk.py domino_programs/hula_forwarding.c 10 1 example_alus/stateful_alus/pred_raw.alu example_alus/stateless_alus/stateless_alu.alu 4 4 10 2
 
-6.LEARN_FILTER(ok)
+6.LEARN_FILTER(ok)Y
 6.1 (optimal)
 learn_filter.c       10              raw          stateless_alu          5*(3+3)         100%                   Not tested yet
 (cmd line: python3 run_iterative_solver_automatically.py learn_filter 10 1 example_alus/stateful_alus/raw.alu example_alus/stateless_alus/stateless_alu.alu 5 3 10 2
 time: real    32m24s)
 258.40 + 73.84 + 162.39 + 254.41 + 191.34 + 165.21 + 199.10 + 240.73 + 94.77 + 304.39
 
-7.MARPLE_NEW_FLOW(ok)
+7.MARPLE_NEW_FLOW(ok)Y
 7.1(Optimal)
-marple_new_flow.c    10              pred_raw     stateless_alu         2*(2+1)         Not test yet                              Not tested yet
+marple_new_flow.c    10              pred_raw     stateless_alu         2*(2+1)         100%                              Not tested yet
 (cmd line: time python3 run_iterative_solver_automatically.py marple_new_flow 10 1 example_alus/stateful_alus/pred_raw.alu example_alus/stateless_alus/stateless_alu.alu 2 2 10 2
 time: real    1m29.523s)
 9.39 + 8.90 + 8.55 + 8.07 + 9.00 + 9.14 + 9.11 + 8.87 + 8.66 + 8.99 
 
-8.MARPLE_TCP_NMO(ok)
+8.MARPLE_TCP_NMO(ok)Y
 8.1(Optimal)
 marple_tcp_nmo.c     10              pred_raw     stateless_alu         3*(2+1)         100%                        Not tested yet
 (cmd line: time python3 run_iterative_solver_automatically.py marple_tcp_nmo 10 1 example_alus/stateful_alus/pred_raw.alu example_alus/stateless_alus/stateless_alu.alu 3 2 10 2
 time: real    2m36.368s)
 15.69 + 15.69 + 15.46 + 15.35 + 15.61 + 15.35 + 15.73 + 16.03 + 15.28 + 15.33 
 
-9.RCP(ok)
+9.RCP(ok)Y
 9.1 (optimal)
 rcp.c                10              pred_raw     stateless_alu          3*(3+1)        100%                   Not tested yet
 (cmd line: time python3 run_iterative_solver_automatically.py rcp 10 1 example_alus/stateful_alus/pred_raw.alu example_alus/stateless_alus/stateless_alu.alu 3 3 10 2
 time: real    11m34.672s)
 34.57 + 74.61 + 61.23 + 59.12 + 44.34 + 23.46 + 46.05 + 161.09 + 74.20 + 115.18
 
-10.SAMPLING(ok)
+10.SAMPLING(ok)Y
 10.1 (optimal)
 sampling.c           10            if_else_raw    stateless_alu          2*(1+1)         100%                    Not tested yet
 (cmd line: time python3 run_iterative_solver_automatically.py sampling 10 1 example_alus/stateful_alus/if_else_raw.alu example_alus/stateless_alus/stateless_alu.alu 2 1 10 2
 time: real    4m51.919s)
 28.34 + 31.10 + 29.26 + 13.98 + 31.96 + 30.71 + 22.25 + 36.33 + 30.41 + 36.74
 
-11.SNAP_HEAVY_HITTER(ok)
+11.SNAP_HEAVY_HITTER(ok)Y
 11.1 (optimal)
 snap_heavy_hitter.c   10             pair          stateless_alu         1*(1+)          100%                         Not run yet
 (cmd line: time python3 run_iterative_solver_automatically.py snap_heavy_hitter 10 2 example_alus/stateful_alus/pair.alu example_alus/stateless_alus/stateless_alu.alu 1 1 10 2
 time: real    11m19.105s)
 38.02 + 40.95 + 61.96 + 102.57 + 45.31 + 38.74 + 123.03 + 54.22 + 116.56 + 56.89
 
-12.SPAM_DETECTION(ok)
+12.SPAM_DETECTION(ok)Y
 spam_detection.c      10             pair          stateless_alu         1*(1+)          100%                         Not run yet
 (cmd line: time python3 run_iterative_solver_automatically.py spam_detection 10 2 example_alus/stateful_alus/pair.alu example_alus/stateless_alus/stateless_alu.alu 1 1 10 2
 time: real    11m20.174s)
