@@ -1,4 +1,15 @@
 Using MacBook Air machine
 Flowlets: around 10mins
 Blue_decrease: around 5mins
-Blue_increase: around 5mins
+Blue_increase: 280.19 + 291.61 + 269.04 + 272.66 + 269.72 + 269.59 + 270.32 + 269.98 + 270.86 + 270.06 
+Learn_filter: 15.07 + 14.85 + 15.18 + 15.23 + 15.17 + 14.78 + 14.42 + 15.27 + 15.62 + 15.19
+
+Marple_new_flow: 8.53 + 8.67 + 8.46 + 8.23 + 8.49 + 9.04 + 8.55 + 8.71 + 8.34 + 8.45 
+
+Marple_tcp_nmo: 12.47 + 12.17 + 11.91 + 12.01 + 12.12 + 12.05 + 11.90 + 11.92 + 12.02 + 12.15
+
+Rcp: 18.30 + 16.95 + 16.63 + 16.78 + 16.19 + 17.97 + 17.12 + 17.25 + 17.16 + 17.48
+
+Sampling: 8.17 + 7.94 + 7.86 + 7.63 + 7.98 + 7.94 + 8.08 + 7.72 + 7.66 + 8.13
+Snap_heavy_hitter:
+Spam_detection:
