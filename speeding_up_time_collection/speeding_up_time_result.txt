@@ -1,0 +1,26 @@
+                       original         pkt_0          pkt_1          pkt_2           state_0            state_1           sum           max
+Blue_increase:
+mutation No.1            400             6               6                             261                 67              340           261
+
+Blue_decrease:
+mutation No.1            8139            8               8                             809                 154             979           809
+
+Flowlets:
+mutation No.1           727m50s         10              10           122m35s           14m44s               10
+
+stateful_fw:
+/tmp/file               222m29s         19              9                9             9  
+
+STFQ:
+original program       1189m7.144s     2m42s          2m17s            12             14
+cmd line:
+time iterative_solver /tmp/stfq_canonicalized_equivalent_0.sk  example_alus/stateful_alus/nested_ifs.alu example_alus/stateless_alus/stateless_alu.alu 4 5 "0,1,2,3" 10 --parallel-sketch
+time iterative_solver /tmp/stfq_canonicalized_equivalent_0.sk  example_alus/stateful_alus/nested_ifs.alu example_alus/stateless_alus/stateless_alu.alu 4 5 "0,1,2,3" 10 --parallel-sketch --pkt-fields=0
+time iterative_solver /tmp/stfq_canonicalized_equivalent_0.sk  example_alus/stateful_alus/nested_ifs.alu example_alus/stateless_alus/stateless_alu.alu 4 5 "0,1,2,3" 10 --parallel-sketch --pkt-fields=1
+time iterative_solver /tmp/stfq_canonicalized_equivalent_0.sk  example_alus/stateful_alus/nested_ifs.alu example_alus/stateless_alus/stateless_alu.alu 4 5 "0,1,2,3" 10 --parallel-sketch
+--pkt-fields=2
+time iterative_solver /tmp/stfq_canonicalized_equivalent_0.sk  example_alus/stateful_alus/nested_ifs.alu example_alus/stateless_alus/stateless_alu.alu 4 5 "0,1,2,3" 10 --parallel-sketch
+--state-groups=0
+
+HULA_FORWARDING:
+
